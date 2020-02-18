@@ -1,0 +1,469 @@
+{
+    "origens_e_estilo": {
+        "roupas": [
+            "couro",
+            "jeans",
+            "terno escuro",
+            "macacão",
+            "minissaia",
+            "alta costura",
+            "camuflada",
+            "roupas normais",
+            "nu",
+            "mendigo chique"
+        ],
+        "cabelos": [
+            "moicano",
+            "longos e maltratados",
+            "curto e espetado",
+            "solto e espalhado",
+            "careca",
+            "com mechas",
+            "Pintados",
+            "curto e arrumado",
+            "curto e encaracolado",
+            "longo e liso"
+        ],
+        "detalhes": [
+            "tatuagens",
+            "óculos espelhados",
+            "cicatrizes rituais",
+            "luvas com pinos",
+            "piercings e/ou alargadores",
+            "Unhas compridas",
+            "botas de salto alto",
+            "lentes de contato estranhas",
+            "luvas sem dedo"
+        ],
+        "origem_etnica": [
+            {
+                "origem": "anglo-americano",
+                "lingua": [
+                    "inglês"
+                ]
+            },
+            {
+                "origem": "africano",
+                "lingua": [
+                    "banto",
+                    "fante",
+                    "kongo",
+                    "ashanti",
+                    "zulu",
+                    "swahili"
+                ]
+            },
+            {
+                "origem": "japonês",
+                "lingua": [
+                    "japonês"
+                ]
+            },
+            {
+                "origem": "coreano",
+                "lingua": [
+                    "coreano"
+                ]
+            },
+            {
+                "origem": "europa central/sovietico",
+                "lingua": [
+                    "bulgaro",
+                    "russo",
+                    "tcheco",
+                    "polonês",
+                    "ucrâniano",
+                    "eslovaco"
+                ]
+            },
+            {
+                "origem": "ilhas do pacífico",
+                "lingua": [
+                    "micronésio",
+                    "tagalog",
+                    "polinésio",
+                    "malasiano",
+                    "sudanês",
+                    "indonês",
+                    "havaiano"
+                ]
+            },
+            {
+                "origem": "chinês/sudeste asiático",
+                "lingua": [
+                    "Burmanês",
+                    "cantonês",
+                    "mandarim",
+                    "thai",
+                    "tibetano",
+                    "vietnamita"
+                ]
+            },
+            {
+                "origem": "afro-americano",
+                "lingua": [
+                    "inglês"
+                ]
+            },
+            {
+                "origem": "hispano-americano",
+                "lingua": [
+                    "inglês",
+                    "espanhol"
+                ]
+            },
+            {
+                "origem": "américa central/sul",
+                "lingua": [
+                    "espanhol",
+                    "portugûes"
+                ]
+            },
+            {
+                "origem": "europeu",
+                "lingua": [
+                    "francês",
+                    "alemão",
+                    "inglês",
+                    "espanhol",
+                    "italiano",
+                    "grego",
+                    "dinamarques",
+                    "flamengo",
+                    "norueguês",
+                    "sueco",
+                    "finlandês"
+                ]
+            }
+        ] 
+    },
+    "antecedente_familiar": {
+        "nivel_familiar": [
+            "executivo de corporação",
+            "gerente de corporação",
+            "técnico de corporação",
+            "membro de um grupo nômade",
+            "bando de piratas",
+            "gangue familiar",
+            "chefão do crime",
+            "morador pobre de uma zona de combate",
+            "desabrigado urbano",
+            "família de megaurbanização"
+        ],
+        "pais": [
+            "Ambos estão vivos",
+            "Algo aconteceu com um de seus pais ou ambos"
+        ],
+        "algo_aconteceu_a_seus_pais": [
+            "Seus pais morreram em combate",
+            "Seus pais morreram em um acidente",
+            "Seus pais foram assassinados",
+            "Seus pais estão sofrendo de amnésia e não se lambram de você",
+            "Você nunca conheceu seus pais",
+            "Seus pais estão escondidos para protegê-lo",
+            "Você foi deixado com algum parente para sua própria segurança",
+            "Você cresceu nas ruas e nunca teve pais",
+            "Seus pais o deram para a adoção",
+            "Seus pais o venderam por dinheiro"
+        ],
+        "status_familiar": [
+            "O status da sua família está em perigo e você corre o risco de perder tudo (se já não perdeu)",
+            "O status familiar vai bem, mesmo se seus pais estiverem desaparecidos ou mortos"
+        ],
+        "tragedia_familiar": [
+            "Sua familia perdeu tudo devido a uma traição",
+            "Sua familia perdeu tudo devido a má administração",
+            "Sua familia foi exilada, ou de alguma outra forma expulsa de sua casa, nação ou Corporação de origem",
+            "Sua familia está presa e você foi o único que conseguiu escapar",
+            "Sua familia desapareceu e você é o único membro remanescente",
+            "Sua familia morreu ou foi assassinada e você é o único que sobreviveu",
+            "Sua familia está envolvida em uma conspiração, organização ou associação, como uma família do crime ou um grupo revolucionário",
+            "Sua familia se espalhou pelos quatro cantos do mundo devido a uma catastrofe",
+            "Sua familia é atormentada por uma guerra familiar que já dura várias gerações",
+            "Você é herdeiro de uma dívida familiar. você deve honrar esta dívida antes de poder prosseguir com sua vida"
+        ],
+        "o_ambiente_de_sua_infancia": [
+            "Nas ruas, sem a supervisão de um adulto.",
+            "num seguro bairro Corporativo.",
+            "num grupo nômade, indo de cidade em cidade.",
+            "numa vizinhança que foi alto nível e agora está em decadência.",
+            "numa zona no centro da cidade, protegida pela Corporação.",
+            "no coração de uma zona de combate.",
+            "numa pequena vila ou cidadela longe da cidade.",
+            "numa megaurbanização.",
+            "com um grupo de piratas aquáticos.",
+            "numa fazenda controlada por uma Corporação ou nas dependências de um centro de pesquisa."
+        ],
+        "irmaos": {
+            "sexo": [
+                "Homem",
+                "Mulher"
+            ],
+            "idade": [
+                "mais novo",
+                "mais velho",
+                "gêmeo"
+            ],
+            "sentimentos": [
+                "O irmão não gosta de você",
+                "O irmão gosta de você",
+                "O irmão não gosta nem desgosta de você",
+                "ele o adora como sendo um herói",
+                "ele o odeia"
+            ]
+        }
+    },
+    "motivacoes": {
+        "caracteristicas_de_sua_personalidade": [
+            "Tímido e reservado",
+            "Tímido e reservado",
+            "Tímido e reservado",
+            "Tímido e reservado",
+            "Tímido e reservado",
+            "Tímido e reservado",
+            "Tímido e reservado",
+            "Tímido e reservado",
+            "Tímido e reservado",
+            "Tímido e reservado"
+        ],
+        "pessoa_que_mais_valoriza": [
+            "O pai ou a mãe",
+            "O pai ou a mãe",
+            "O pai ou a mãe",
+            "O pai ou a mãe",
+            "O pai ou a mãe",
+            "O pai ou a mãe",
+            "O pai ou a mãe",
+            "O pai ou a mãe",
+            "O pai ou a mãe",
+            "O pai ou a mãe"
+        ],
+        "o_que_mais_valoriza": [
+            "O dinheiro",
+            "O dinheiro",
+            "O dinheiro",
+            "O dinheiro",
+            "O dinheiro",
+            "O dinheiro",
+            "O dinheiro",
+            "O dinheiro",
+            "O dinheiro",
+            "O dinheiro"
+        ],
+        "qual_a_sua_opiniao_em_relacao_as_pessoas": [
+            "Neutra",
+            "Neutra",
+            "Neutra",
+            "Neutra",
+            "Neutra",
+            "Neutra",
+            "Neutra",
+            "Neutra",
+            "Neutra",
+            "Neutra"
+        ]
+    },
+    "grandes_problemas_exitos": {
+        "voce_se_deu_bem": [
+            {
+                "acontecimento": "fez um contato poderoso no governo.",
+                "resultado": {
+                    "1-4": "Departamento de Polícia",
+                    "5-7": "Promotoria",
+                    "8-10": "Departamento de Polícia"
+                }
+            },
+            {
+                "acontecimento": "sorte nas finanças",
+                "resultado": null
+            },
+            {
+                "acontecimento": "êxito no trabalho ou nos negócios",
+                "resultado": null
+            },
+            {
+                "acontecimento": "encontrou um mestre/sensei",
+                "resultado": null
+            },
+            {
+                "acontecimento": "encontrou um professor",
+                "resultado": null
+            },
+            {
+                "acontecimento": "um poderoso executivo de Corporação lhe deve um favor",
+                "resultado": null
+            },
+            {
+                "acontecimento": "um grupo de Nômades local considera você um amigo",
+                "resultado": null
+            },
+            {
+                "acontecimento": "fez um amigo na força policial",
+                "resultado": null
+            },
+            {
+                "acontecimento": "uma das gangues locais gosta de vôce",
+                "resultado": null
+            },
+            {
+                "acontecimento": "encontrou um instrutor de combate",
+                "resultado": null
+            }
+        ],
+        "aconteceu_um_desastre": [
+            {
+                "acontecimento": "Débito ou perda financeira",
+                "resultado": null
+            },
+            {
+                "acontecimento": "Débito ou perda financeira",
+                "resultado": null
+            },
+            {
+                "acontecimento": "Débito ou perda financeira",
+                "resultado": null
+            },
+            {
+                "acontecimento": "Débito ou perda financeira",
+                "resultado": null
+            },
+            {
+                "acontecimento": "Débito ou perda financeira",
+                "resultado": null
+            },
+            {
+                "acontecimento": "Débito ou perda financeira",
+                "resultado": null
+            },
+            {
+                "acontecimento": "Débito ou perda financeira",
+                "resultado": null
+            },
+            {
+                "acontecimento": "Débito ou perda financeira",
+                "resultado": null
+            },
+            {
+                "acontecimento": "Débito ou perda financeira",
+                "resultado": null
+            },
+            {
+                "acontecimento": "Débito ou perda financeira",
+                "resultado": null
+            }
+        ],
+        "o_que_vai_fazer_a_respeito": [
+            "limpar seu nome.",
+            "deixar pra lá e tentar esquecer.",
+            "caçar os responsáveis e fazer com que paguem!",
+            "tomar o que é seu por direito.",
+            "salvar, se possivel, qualquer envolvido nessa situação."
+        ]
+    },
+    "amigos_e_inimigos": {
+        "sexo": [
+            "Homem",
+            "Mulher"
+        ],
+        "fez_um_inimigo": [
+            "um ex-amigo",
+            "um ex-amigo",
+            "um ex-amigo",
+            "um ex-amigo",
+            "um ex-amigo",
+            "um ex-amigo",
+            "um ex-amigo",
+            "um ex-amigo",
+            "um ex-amigo",
+            "um ex-amigo"
+        ],
+        "a_acusa": [
+            "fez com que o outro perdesse seu prestigio ou status",
+            "fez com que o outro perdesse seu prestigio ou status",
+            "fez com que o outro perdesse seu prestigio ou status",
+            "fez com que o outro perdesse seu prestigio ou status",
+            "fez com que o outro perdesse seu prestigio ou status",
+            "fez com que o outro perdesse seu prestigio ou status",
+            "fez com que o outro perdesse seu prestigio ou status",
+            "fez com que o outro perdesse seu prestigio ou status",
+            "fez com que o outro perdesse seu prestigio ou status",
+            "fez com que o outro perdesse seu prestigio ou status"
+        ],
+        "quem_se_deu_mal": [
+            "eles o odeiam",
+            "você os odeia",
+            "o sentimento é mútuo"
+        ],
+        "o_que_vai_fazer_a_respeito": [
+            "ser possuído por uma cólera assassina e arrancar a cabeça do outro",
+            "ser possuído por uma cólera assassina e arrancar a cabeça do outro",
+            "ser possuído por uma cólera assassina e arrancar a cabeça do outro",
+            "ser possuído por uma cólera assassina e arrancar a cabeça do outro",
+            "ser possuído por uma cólera assassina e arrancar a cabeça do outro"
+        ],
+        "o_que_ele_pode_fazer_contra_voce": [
+            "apenas ele mesmo",
+            "apenas ele mesmo",
+            "apenas ele mesmo",
+            "apenas ele mesmo",
+            "apenas ele mesmo",
+            "apenas ele mesmo"
+        ],
+        "fazendo_um_amigo": [
+            "como um irmão/irmã mais velho para você",
+            "como um irmão/irmã mais velho para você",
+            "como um irmão/irmã mais velho para você",
+            "como um irmão/irmã mais velho para você",
+            "como um irmão/irmã mais velho para você",
+            "como um irmão/irmã mais velho para você",
+            "como um irmão/irmã mais velho para você",
+            "como um irmão/irmã mais velho para você",
+            "como um irmão/irmã mais velho para você",
+            "como um irmão/irmã mais velho para você"
+        ]
+    },
+    "vida_amorosa": {
+        "como_foi": [
+            "um caso amoroso feliz",
+            "um caso amoroso feliz",
+            "um caso amoroso feliz",
+            "um caso amoroso feliz"
+        ],
+        "caso_amoroso_tragico": [
+            "seu amor morreu em um acidente",
+            "seu amor morreu em um acidente",
+            "seu amor morreu em um acidente",
+            "seu amor morreu em um acidente",
+            "seu amor morreu em um acidente",
+            "seu amor morreu em um acidente",
+            "seu amor morreu em um acidente",
+            "seu amor morreu em um acidente",
+            "seu amor morreu em um acidente",
+            "seu amor morreu em um acidente"
+        ],
+        "caso_amoroso_problematico": [
+            "familia/amigos de sua amante o odeiam",
+            "familia/amigos de sua amante o odeiam",
+            "familia/amigos de sua amante o odeiam",
+            "familia/amigos de sua amante o odeiam",
+            "familia/amigos de sua amante o odeiam",
+            "familia/amigos de sua amante o odeiam",
+            "familia/amigos de sua amante o odeiam",
+            "familia/amigos de sua amante o odeiam",
+            "familia/amigos de sua amante o odeiam",
+            "familia/amigos de sua amante o odeiam"
+        ],
+        "sentimentos_mutuos": [
+            "Ele/ela ainda o ama",
+            "Ele/ela ainda o ama",
+            "Ele/ela ainda o ama",
+            "Ele/ela ainda o ama",
+            "Ele/ela ainda o ama",
+            "Ele/ela ainda o ama",
+            "Ele/ela ainda o ama",
+            "Ele/ela ainda o ama",
+            "Ele/ela ainda o ama",
+            "Ele/ela ainda o ama"
+        ]
+    }
+}

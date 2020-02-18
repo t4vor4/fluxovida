@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useReducer} from 'react';
+import Origem from './components/Origens';
+import Antecedente from './components/AntecedenteFamiliar';
+import Motivacoes from './components/Motivacoes';
+import Eventos from './components/EventosDaVida';
+// import $f from './components/ControlFunc';
+import Fluxo from './json/fluxovida.json';
 import './App.css';
 
+
 function App() {
+  // $f.test();
+  // console.log(Fluxo)
+
+  const obj = {}
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Origem item={Fluxo.origens_e_estilo}/>
+      <Antecedente item={Fluxo.antecedente_familiar}/>
+      <Motivacoes />
+      <Eventos />
     </div>
   );
 }
