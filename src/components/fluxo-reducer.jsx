@@ -8,7 +8,8 @@ export const initialState = {
     motivacoes: {},
     grandes_problemas_exitos: {},
     amigos_e_inimigos: {},
-    vida_amorosa: {}
+    vida_amorosa: {},
+    irmaos: {}
 }
 
 // console.log(state, action)
