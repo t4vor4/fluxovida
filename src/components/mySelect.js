@@ -24,7 +24,6 @@ export default (props) => {
     }
 
     useEffect(() => {
-        // console.log(initialState)
         if(!!cb) {
             cb(etv)
         }
