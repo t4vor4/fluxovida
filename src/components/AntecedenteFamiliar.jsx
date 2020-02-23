@@ -32,27 +32,30 @@ export default (props) => {
     }
 
     //irmaos
+
     let qtdIrmaos = $f.dado(10);
 
     qtdIrmaos = qtdIrmaos <= 7 ? qtdIrmaos : 0;
 
-    qtdIrmaos = 2;
+    // qtdIrmaos = 2;
 
     initialState.irmaos = $f.irmaosFunc(qtdIrmaos,irmaos);
 
     const [useIrmao, setUseIrmao] = useReducer(reducer, initialState); 
+    // const [useQtd, setUseQtd] = useReducer(reducer, initialState.irmaos);
     
     useEffect(() => {
 
+        document.querySelector('[quantidade]').innerText = useIrmao.irmaos.length;
         document.querySelector('[jujuba]').innerHTML = monta_html_irmaos(useIrmao.irmaos)
         
     })
 
-    const addBro = arr => {
-        
-        const bro = arr
+    const mudaHtml = code => document.querySelector('[jujuba]').innerHTML = monta_html_irmaos(code)
 
-        console.log(bro.irmaos)
+    const addBro = (e,arr) => {
+
+        const bro = arr
 
         const x = $f.irmaosFunc(1,irmaos)
 
@@ -60,8 +63,23 @@ export default (props) => {
     
         setUseIrmao({type: 'normal', value: bro })
 
-        document.querySelector('[jujuba]').innerHTML = monta_html_irmaos(bro.irmaos)
+        document.querySelector('[quantidade]').innerText = useIrmao.irmaos.length;
 
+        mudaHtml(bro.irmaos)
+
+    }
+
+    const removeBro = (e,arr) => {        
+
+        const bro = arr
+
+        bro.irmaos.pop()
+    
+        setUseIrmao({type: 'normal', value: bro })
+
+        document.querySelector('[quantidade]').innerText = useIrmao.irmaos.length;
+
+        mudaHtml(bro.irmaos)
     }
 
     return (
@@ -75,11 +93,11 @@ export default (props) => {
                 <li>O ambiente de sua infância: <MySelect arr={o_ambiente_de_sua_infancia} type={$type} name='o_ambiente_de_sua_infancia' /></li>
                 <li>Tragédia familiar: <MySelect arr={tragedia_familiar} type={$type} name='tragedia_familiar' /></li>
                 <li irmaosqtd="" >Irmãos: Quantidade  {
-                    qtdIrmaos < 7 && (<button bigorna="" onClick={e => addBro(useIrmao)}>Adicionar</button>)}|
-                    {qtdIrmaos}|
-                    {/*qtdIrmaos > 0 && (<button onClick={e => removeIrmao(useIrmao)}>Remover</button>)*/
+                    useIrmao.irmaos.length < 7 && (<button onClick={e => addBro(e,useIrmao)}>Adicionar</button>)}|
+                    <span quantidade={useIrmao.irmaos.length}></span>|
+                    {useIrmao.irmaos.length > 0 && (<button onClick={e => removeBro(e,useIrmao)}>Remover</button>)
                 }</li>
-                {(!!qtdIrmaos && qtdIrmaos <= 7) && (<div>Características dos irmãos: <span jujuba=""></span></div>)}
+                <div>Características dos irmãos: <span jujuba=""></span></div>
             </ul>
         </section>
     )
