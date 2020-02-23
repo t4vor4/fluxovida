@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useReducer, useState, useEffect } from 'react';
 import {initialState, reducer} from './fluxo-reducer'
 import MySelect from './mySelect'
 import $f from './ControlFunc';
@@ -16,69 +16,52 @@ export default (props) => {
 
     const $type = 'antecedente_familiar'
 
+    const monta_html_irmaos = (irmaos) => {
+        let arrHtml = ''
+        for (let i = 0; i < irmaos.length; i++) {
+            const irmao = irmaos[i];
+            const elHtml = `<ul class="irmao" data-index=${i}>
+                    <li>Nome: ${irmao.nome}</li>
+                    <li>Sexo: ${irmao.genero}</li>
+                    <li>Idade: ${irmao.idade}</li>
+                    <li>Idade: ${irmao.sentimentos}</li>
+                </ul>`
+            arrHtml = arrHtml+elHtml
+        }
+        return arrHtml
+    }
+
     //irmaos
-    let qtdIrmaos = $f.dado(10)
+    let qtdIrmaos = $f.dado(10);
 
-    qtdIrmaos = qtdIrmaos <= 7 ? qtdIrmaos : 0
+    qtdIrmaos = qtdIrmaos <= 7 ? qtdIrmaos : 0;
 
-    qtdIrmaos = 0
+    qtdIrmaos = 2;
 
-    // const [qtdIrmaos, setQtdIrmaos] = useState($qtdIrmaos);
+    initialState.irmaos = $f.irmaosFunc(qtdIrmaos,irmaos);
 
-    const irmaosFunc = (resultado) => {
-
-        const generoIrmao = gen => gen === 1 ? irmaos.sexo[0] : irmaos.sexo[1]
-        const idadeIrmao = idade => idade <= 5 ? irmaos.idade[1] : idade <= 9 ? irmaos.idade[0] : irmaos.idade[2]
-        const sentimentosIrmaos = sent => irmaos.sentimentos[(sent - 1)]
-        const geraIrmao = (i = 0) => {
-            return (
-                <ul key={i} className="irmao">
-                    <li>nome: {'Irmao' + i}</li>
-                    <li>genero: {generoIrmao($f.dado(2))}</li>
-                    <li>idade: {idadeIrmao($f.dado(10))}</li>
-                    <li>sentimentos: {sentimentosIrmaos($f.dado(5))}</li>
-                </ul>
-            )
-        }
-
-
-        const temIrmaos = (res) => {
-            res = res > 7 ? 0 : res
-
-            const irmaos = []
-
-            for (let i = 0; i < res; i++) {
-                irmaos.push(geraIrmao(i))
-            }
-
-            return irmaos
-        }
-
-
-        return temIrmaos(resultado)
-    }
-
-    const [irmFinal, setIrmirmFinal] = useState(irmaosFunc(qtdIrmaos));
-
+    const [useIrmao, setUseIrmao] = useReducer(reducer, initialState); 
     
+    useEffect(() => {
 
-    const addIrmao = bro => {
-        // adiciona um irmao
-        const x = irmaosFunc(1)
-        bro.push(x[0])
-        setIrmirmFinal(bro)
-        console.log(x)
-        const place = !!document.querySelector('li.bros') && document.querySelector('li.bros')
-        !!place ? place.append(x[0]) : document.querySelector('[irmaosqtd]').after(<li className="bros">Características dos irmãos: {x[0]}</li>)
+        document.querySelector('[jujuba]').innerHTML = monta_html_irmaos(useIrmao.irmaos)
         
-    }
+    })
 
-    const removeIrmao = bro => {
-        // adiciona um irmao
-        bro.pop()
-        setIrmirmFinal(bro)
-        document.querySelector('ul.irmao:last-of-type').remove()
-        console.log(irmFinal)
+    const addBro = arr => {
+        
+        const bro = arr
+
+        console.log(bro.irmaos)
+
+        const x = $f.irmaosFunc(1,irmaos)
+
+        bro.irmaos.push( x[0] );
+    
+        setUseIrmao({type: 'normal', value: bro })
+
+        document.querySelector('[jujuba]').innerHTML = monta_html_irmaos(bro.irmaos)
+
     }
 
     return (
@@ -92,11 +75,11 @@ export default (props) => {
                 <li>O ambiente de sua infância: <MySelect arr={o_ambiente_de_sua_infancia} type={$type} name='o_ambiente_de_sua_infancia' /></li>
                 <li>Tragédia familiar: <MySelect arr={tragedia_familiar} type={$type} name='tragedia_familiar' /></li>
                 <li irmaosqtd="" >Irmãos: Quantidade  {
-                    qtdIrmaos < 7 && (<button onClick={e => addIrmao(irmFinal)}>Adicionar</button>)}|
+                    qtdIrmaos < 7 && (<button bigorna="" onClick={e => addBro(useIrmao)}>Adicionar</button>)}|
                     {qtdIrmaos}|
-                    {qtdIrmaos > 0 && (<button onClick={e => removeIrmao(irmFinal)}>Remover</button>)
+                    {/*qtdIrmaos > 0 && (<button onClick={e => removeIrmao(useIrmao)}>Remover</button>)*/
                 }</li>
-                {(!!qtdIrmaos && qtdIrmaos <= 7) && (<li className="bros">Características dos irmãos: {irmFinal }</li>)}
+                {(!!qtdIrmaos && qtdIrmaos <= 7) && (<div>Características dos irmãos: <span jujuba=""></span></div>)}
             </ul>
         </section>
     )

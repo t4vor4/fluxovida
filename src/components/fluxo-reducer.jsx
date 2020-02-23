@@ -1,4 +1,4 @@
-import React,{useReducer} from 'react'
+import React, { useReducer } from 'react'
 
 import $f from './ControlFunc'
 
@@ -9,16 +9,16 @@ export const initialState = {
     grandes_problemas_exitos: {},
     amigos_e_inimigos: {},
     vida_amorosa: {},
-    irmaos: {}
+    irmaos: {},
 }
 
 // console.log(state, action)
-export const reducer = (state,action) => {
+export const reducer = (state, action) => {
     switch (action.type) {
-        case 'normal' :
+        case 'normal':
             return action.value
             break;
-    
+
         default:
             break;
     }
