@@ -135,7 +135,88 @@
                     "finlandês"
                 ]
             }
-        ] 
+        ],
+        "origem": [
+            "anglo-americano",
+            "africano",
+            "japonês",
+            "coreano",
+            "europa central/sovietico",
+            "ilhas do pacífico",
+            "chinês/sudeste asiático",
+            "afro-americano",
+            "hispano-americano",
+            "américa central/sul",
+            "europeu"
+        ],
+        "lingua": [
+            [
+                "inglês"
+            ],
+            [
+                "banto",
+                "fante",
+                "kongo",
+                "ashanti",
+                "zulu",
+                "swahili"
+            ],
+            [
+                "japonês"
+            ],
+            [
+                "coreano"
+            ],
+            [
+                "bulgaro",
+                "russo",
+                "tcheco",
+                "polonês",
+                "ucrâniano",
+                "eslovaco"
+            ],
+            [
+                "micronésio",
+                "tagalog",
+                "polinésio",
+                "malasiano",
+                "sudanês",
+                "indonês",
+                "havaiano"
+            ],
+            [
+                "Burmanês",
+                "cantonês",
+                "mandarim",
+                "thai",
+                "tibetano",
+                "vietnamita"
+            ],
+            [
+                "inglês"
+            ],
+            [
+                "inglês",
+                "espanhol"
+            ],
+            [
+                "espanhol",
+                "portugûes"
+            ],
+            [
+                "francês",
+                "alemão",
+                "inglês",
+                "espanhol",
+                "italiano",
+                "grego",
+                "dinamarques",
+                "flamengo",
+                "norueguês",
+                "sueco",
+                "finlandês"
+            ]
+        ]
     },
     "antecedente_familiar": {
         "nivel_familiar": [

@@ -6,7 +6,9 @@ export default (props) => {
 
     const {arr,type,name,cb} = props;
 
-    const [etv, setEtv] = useState($f.rollArr(arr));
+    const $number = $f.dado(arr.length) - 1
+
+    const [etv, setEtv] = useState(arr[$number]);
     const $opts = [];
 
     initialState[type][name] = etv
@@ -28,6 +30,7 @@ export default (props) => {
             cb(etv)
         }
         dispatch({type: 'normal', value: initialState  })
+        console.log('initial',initialState)
     })
 
     for(let i=0; i < arr.length; i++) {
