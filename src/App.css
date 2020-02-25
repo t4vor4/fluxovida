@@ -7,3 +7,8 @@ ul.irmao {
   border: 1px solid #ccc;
   padding: 5px;
 }
+
+[addbro="7"],
+[removebro="0"] {
+  display: none;
+}

@@ -2,6 +2,8 @@
 
 const func = {}
 
+func.qry = el => document.querySelector(el)
+
 func.dado = (x) => Math.floor(Math.random() * x) + 1;
 
 func.rollArr = arr => arr[func.dado(arr.length) - 1]

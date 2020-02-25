@@ -1,5 +1,5 @@
 import React,{useReducer, useState, useEffect } from 'react';
-import {initialState, respIrmao, reducer, thisQtd} from './fluxo-reducer'
+import {initialState, respIrmao, reducer} from './fluxo-reducer'
 import $f from './ControlFunc';
 
 export default (props) => {
@@ -21,12 +21,15 @@ export default (props) => {
         return arrHtml
     }
 
-    const [$qtd, setQtd] = useReducer(reducer, thisQtd);
+    console.log('initialState.irmaos.length ',initialState.irmaos.length)
+
+    let qtdIrmaos = initialState.irmaos[0] === 0 ? $f.dado(10) : initialState.irmaos.length;
+    qtdIrmaos = qtdIrmaos <= 7 ? qtdIrmaos : 0;
 
     const {bro} = props
 
-
-    initialState.irmaos = $f.irmaosFunc(thisQtd,bro);
+    initialState.irmaos = initialState.irmaos[0] !== 0 && !!initialState.irmaos.length ? initialState.irmaos : $f.irmaosFunc(qtdIrmaos,bro);
+    
 
     const [list, setList] = useReducer(reducer, initialState); 
 
@@ -35,8 +38,14 @@ export default (props) => {
     const [brohtml, setBroHtml] = useReducer(reducer, htmlpronto);
 
     useEffect(() => {
-        console.log(initialState)
-        // qtdIrmaos = initialState.irmao.length 
+
+        console.log(initialState.irmaos)
+
+        const $L = !!document.querySelectorAll('ul.irmao').length ? document.querySelectorAll('ul.irmao').length : 0;
+        
+        $f.qry('[addbro]').setAttribute('addbro',$L)
+
+        $f.qry('[removebro]').setAttribute('removebro',$L)
     })
 
 
@@ -44,27 +53,39 @@ export default (props) => {
 
     
 
-    const addBro = _ => {
-        const anapolis = (<div>amanda</div>)
-        setBroHtml({type: 'irmao', value: anapolis })
+    const addBro = lista => {
+
+        const newBro = $f.irmaosFunc(1,bro);
+        
+        initialState.irmaos.push(newBro[0])
+
+        const $html = monta_html_irmaos(initialState.irmaos)
+
+        setList({type: 'normal', value: initialState })
+        
+        setBroHtml({type: 'irmao', value: $html })
+
+        console.log(initialState.irmaos)
+
+        // setBroHtml({type: 'irmao', value: anapolis })
     }
 
     const remBro = lista => {
 
         initialState.irmaos.pop();
         
-        setList({type: 'normal', value: initialState })
-
         const $html = monta_html_irmaos(initialState.irmaos)
+
+        setList({type: 'normal', value: initialState })
         
-        setBroHtml({type: 'irmao', value: $html })        
+        setBroHtml({type: 'irmao', value: $html })   
 
     }
     
     return (
         <div>
-            <button className="add" onClick={ e => addBro() }>Add</button>
-            <button className="add" onClick={ e => remBro(list) }>Remove</button>
+            <button className="add" addbro="" onClick={ e => addBro(list) }>Add</button>
+            <button className="remove" removebro="" onClick={ e => remBro(list) }>Remove</button>
             { brohtml }
         </div>
     ) 

@@ -9,7 +9,7 @@ export const initialState = {
     grandes_problemas_exitos: {},
     amigos_e_inimigos: {},
     vida_amorosa: {},
-    irmaos: {},
+    irmaos: [0],
 }
 
 export const respIrmao = (
