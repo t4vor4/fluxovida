@@ -21,8 +21,6 @@ export default (props) => {
         return arrHtml
     }
 
-    console.log('initialState.irmaos.length ',initialState.irmaos.length)
-
     let qtdIrmaos = initialState.irmaos[0] === 0 ? $f.dado(10) : initialState.irmaos.length;
     qtdIrmaos = qtdIrmaos <= 7 ? qtdIrmaos : 0;
 
@@ -39,7 +37,7 @@ export default (props) => {
 
     useEffect(() => {
 
-        console.log(initialState.irmaos)
+        console.log(initialState)
 
         const $L = !!document.querySelectorAll('ul.irmao').length ? document.querySelectorAll('ul.irmao').length : 0;
         

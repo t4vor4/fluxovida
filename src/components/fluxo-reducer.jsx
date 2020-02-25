@@ -12,6 +12,8 @@ export const initialState = {
     irmaos: [0],
 }
 
+export const estaLingua = null;
+
 export const respIrmao = (
     <div>Características dos irmãos: 
         <span jujuba=""></span>
@@ -31,7 +33,7 @@ export const reducer = (state, action) => {
             return action.value
             break;
 
-        case 'qtd':
+        case 'lingua':
             return action.value
             break;
 

@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState,useReducer} from 'react';
+import {initialState, estaLingua, reducer} from './fluxo-reducer'
 import MySelect from './mySelect'
-import {initialFlux, reducerFlux} from './fluxo-reducer'
 import $f from './ControlFunc';
 
 export default (props) => {
@@ -9,11 +9,13 @@ export default (props) => {
 
     const lugar = origem_etnica.map( plc => plc.origem)
     
-    const [lingua, setLingua] = useState('')
+    // const [lingua, setLingua] = useState('')
+
+    const [lingua, setLingua] = useReducer(reducer, estaLingua)
 
     const filtraLingua = lugar => {
-        const $lingua = origem_etnica.filter( el => el.origem === lugar)
-        setLingua($lingua[0].lingua)
+        const x = origem_etnica.filter( el => el.origem === lugar)
+        !lingua && setLingua({type: 'lingua', value: x[0].lingua })
     }
 
     const $type = 'origens_e_estilo'
@@ -30,9 +32,10 @@ export default (props) => {
             <h2>Origem étnicas</h2>
             <ul>
                 <li>Região de origem: <MySelect arr={lugar} cb={filtraLingua} type={$type} name='lugar'/></li>
-                <li>Língua: <MySelect arr={lingua} type={$type} name='lingua'/></li>
+                {!!lingua && (<li>Língua: <MySelect arr={lingua} type={$type} name='lingua'/></li>)}
             </ul>
         </section>
     )
 }
+
 
