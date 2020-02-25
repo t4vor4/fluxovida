@@ -8,14 +8,12 @@ export default (props) => {
     const {roupas, cabelos, detalhes, origem_etnica } = props.item;
 
     const lugar = origem_etnica.map( plc => plc.origem)
-    
-    // const [lingua, setLingua] = useState('')
 
     const [lingua, setLingua] = useReducer(reducer, estaLingua)
 
     const filtraLingua = lugar => {
         const x = origem_etnica.filter( el => el.origem === lugar)
-        !lingua && setLingua({type: 'lingua', value: x[0].lingua })
+        setLingua({type: 'lingua', value: x[0].lingua })
     }
 
     const $type = 'origens_e_estilo'
