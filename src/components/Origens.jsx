@@ -5,19 +5,28 @@ import $f from './ControlFunc';
 
 export default (props) => {
 
-    const {roupas, cabelos, detalhes, origem, lingua } = props.item;
+    const {roupas, cabelos, detalhes, origem_etnica, origem, lingua } = props.item;
 
-    // const lugar = origem_etnica.map( plc => plc.origem)
+    const [localOrigem, setLocalOrigem] = useReducer(reducer, null ) 
 
-    // const lugar = origem_etnica.map( plc => plc.origem)
+    const [fala, setFala] = useReducer(reducer, estaLingua )
 
+    const [thatState, setThatState] = useReducer(reducer,initialState)
     
+    const cblocalOrigem = resp => {
+        setLocalOrigem({type: 'localOrigem', value: resp  })   
+        const x = !!localOrigem && origem_etnica.map( local => local.origem === localOrigem && local.lingua).filter(local => !!local)
+        !!x[0] && setFala({type: 'lingua', value: x[0]})
 
-    const [fala, setFala] = useReducer(reducer, null )
-    
+        
+    }
 
     useEffect(() => {
-        console.log(initialState)
+        var v = !!document.querySelector('.lang select') && document.querySelector('.lang select').value
+        if (!!v) {
+            initialState.origens_e_estilo.lingua = v
+            setThatState({type: 'normal', value: initialState })
+        }
     })
 
     const $type = 'origens_e_estilo'
@@ -33,11 +42,9 @@ export default (props) => {
             </ul>
             <h2>Origem étnicas</h2>
             <ul>        
-                {/* <li>Região de origem: <MySelect arr={lugar} cb={filtraLingua} type={$type} name='lugar'/></li> */}
-                {/* <li>Região de origem: <MySelect arr={lugar} type={$type} name='lugar'/></li>*/}
-
-                <li>Região de origem: <MySelect arr={origem} type={$type} name='origem'/></li>
-                {!!fala && (<li>Língua: <MySelect arr={lingua} type={$type} name='lingua'/></li>)}
+                {/* <li>Região de origem: <MySelect arr={origem} cb={cblocalOrigem} type={$type} name='origem'/></li> */}
+                <li>Região de origem: <MySelect arr={origem} cb={cblocalOrigem} type={$type} name='origem_etnica'/></li>
+                {!!fala && (<li className="lang">Língua: <MySelect arr={fala} type={$type} name='lingua'/></li>)}
                 
             </ul>
         </section>

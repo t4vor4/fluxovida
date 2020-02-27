@@ -37,8 +37,6 @@ export default (props) => {
 
     useEffect(() => {
 
-        console.log(initialState)
-
         const $L = !!document.querySelectorAll('ul.irmao').length ? document.querySelectorAll('ul.irmao').length : 0;
         
         $f.qry('[addbro]').setAttribute('addbro',$L)

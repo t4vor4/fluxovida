@@ -33,6 +33,10 @@ export const reducer = (state, action) => {
             return action.value
             break;
 
+        case 'localOrigem': 
+            return action.value
+            break;
+
         case 'lingua':
             return action.value
             break;
