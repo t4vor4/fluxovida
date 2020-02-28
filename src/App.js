@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <Origem item={Fluxo.origens_e_estilo}/>
       <Antecedente item={Fluxo.antecedente_familiar}/>
-      <Motivacoes />
+      <Motivacoes item={Fluxo.motivacoes}/>
       <Eventos />
     </div>
   );
