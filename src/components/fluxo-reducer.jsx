@@ -2,15 +2,7 @@ import React, { useReducer } from 'react'
 
 import $f from './ControlFunc'
 
-export const initialState = {
-    origens_e_estilo: {},
-    antecedente_familiar: {},
-    motivacoes: {},
-    grandes_problemas_exitos: {},
-    amigos_e_inimigos: {},
-    vida_amorosa: {},
-    irmaos: [0],
-}
+export const initialObj = {}
 
 export const estaLingua = null;
 
@@ -29,7 +21,7 @@ export const thisQtd = _ => {
 // console.log(state, action)
 export const reducer = (state, action) => {
     switch (action.type) {
-        case 'normal':
+        case 'obj':
             return action.value
             break;
 
