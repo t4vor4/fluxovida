@@ -296,6 +296,7 @@
         }
     },
     "motivacoes": {
+        "nome": "Motivações",
         "caracteristicas_de_sua_personalidade": [
             "Tímido e reservado",
             "Rebelde, anti-social e violento",
@@ -359,6 +360,7 @@
         ]
     },
     "grandes_problemas_exitos": {
+        "nome": "Grandes problemas e grandes êxitos",
         "voce_se_deu_bem": [
             {
                 "acontecimento": "fez um contato poderoso no governo.",
@@ -456,6 +458,7 @@
         ]
     },
     "amigos_e_inimigos": {
+        "nome": "Amigos e inimigos",
         "sexo": [
             "Homem",
             "Mulher"
@@ -518,6 +521,7 @@
         ]
     },
     "vida_amorosa": {
+        "nome": "Vida amorosa",
         "como_foi": [
             "um caso amoroso feliz",
             "um caso amoroso feliz",

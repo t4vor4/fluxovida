@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   // $f.test();
-  console.log(Fluxo.antecedente_familiar)
+  console.log(Fluxo)
 
   const [initial,setInitial] = useState($f.init())
   
