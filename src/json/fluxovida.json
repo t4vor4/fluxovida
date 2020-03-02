@@ -359,210 +359,181 @@
             
         ]
     },
-    "grandes_problemas_exitos": {
-        "nome": "Grandes problemas e grandes êxitos",
-        "voce_se_deu_bem": [
-            {
-                "acontecimento": "fez um contato poderoso no governo.",
-                "resultado": {
-                    "1-4": "Departamento de Polícia",
-                    "5-7": "Promotoria",
-                    "8-10": "Departamento de Polícia"
-                }
+    "eventos_da_vida": {
+        "nome": "Eventos da Vida",
+        "eventos":{
+            "grandes_problemas_exitos": {
+                "nome": "Grandes problemas e grandes êxitos",
+                "voce_se_deu_bem": [
+                    "fez um contato poderoso no Departamento de Polícia.",
+                    "fez um contato poderoso na Promotoria.",
+                    "fez um contato poderoso no Gabinete do Prefeito.",
+                    "sorte nas finanças. Você ganhou ${1D10x100} créditos.",
+                    "êxito no trabalho ou nos negócios. Você recebeu ${1D10x100} créditos como resultado do seu esforço.",
+                    "encontrou um mestre/sensei que lhe ensinou uma nova arte marcial ou aperfeiçoou uma já conhecida.",
+                    "encontrou um professor que lhe ajudou a aperfeiçoar um conhecimento/perícia baseada em inteligência ou lhe ensinou uma perícia nova",
+                    "um poderoso executivo de Corporação lhe deve um favor.",
+                    "um grupo de Nômades local considera você um amigo. Eles ficarão felizes em ajuda-lo de vez em quando (máximo de uma vez ao mês).",
+                    "fez um amigo na força policial. Ele pode te ajudar a obter informações em qualquer situação relacionada a polícia",
+                    "uma das gangues locais gosta de vôce. Eles podem ajuda-lo uma de vez em quando mas melhor não exagerar (máximo de uma vez ao mês)",
+                    "encontrou um instrutor de combate. Ele lhe ensinou combate com armado (mas não combate desarmado) com um tipo de arma a escolha do jogador."
+                ],
+                "aconteceu_um_desastre": [
+                    "Você deve ${1D10x100} em créditos para alguém perigoso. Se você não puder paga-los agora, você tem uma dívida a ser paga, em dinheiro... ou sangue",
+                    "Você perdeu ${1D10x100} em créditos. Se não pagar suas dividas ao banco eles poderão enviar um cobrador que pode usar os mais diversos métodos para receber a sua dívida. Alguns não muito agradáveis.",
+                    "Você esteve na prisão {1D10} meses.",
+                    "Você foi mantido como refém por {1D10} meses.",
+                    "Você contraiu uma doença nessa época. Isso afetou negativamente sua destreza permanentemente.",
+                    "Você adquiriu um vício nessa época. Isso afetou negativamente sua agilidade permanentemente.",
+                    "Você foi traído e agora esta sendo chantageado",
+                    "Você foi traído e um segredo seu foi revelado",
+                    "Você foi traído por um amigo muito próximo",
+                    "Você foi traído em um romance",
+                    "Você foi traído no seu trabalho",
+                    "Você sofreu um grave acidente e ficou terrivelmente desfigurado, o que influencia negativamente em relações sociais.",
+                    "Você sofreu um grave acidente e ficou hospitalizado por {1D10} meses.",
+                    "Você sofreu um grave acidente e não lembra do que aconteceu em um período de {1D10} meses daquele ano.",
+                    "Você sofreu um grave trauma e tem 80% de chance de ter terríveis pesadelos sobre o acidente (e acordar gritando).",
+                    "Você perdeu um amigo, parente ou amante que gostava muito em um acidente.",
+                    "Você perdeu um amigo, parente ou amante que gostava muito. Essa pessoa foi morta por um desconhecido.",
+                    "Você perdeu um amigo, parente ou amante que gostava muito. Essa pessoa foi assassinada e você conhece a identidade do assassino. Só lhe faltam provas.",
+                    "Você foi falsamente acusado de roubo.",
+                    "Você foi falsamente acusado de covardia.",
+                    "Você foi falsamente acusado de violência sexual.",
+                    "Você foi falsamente acusado de assassinato.",
+                    "Você foi falsamente acusado de falsidade.",
+                    "Você foi falsamente acusado de traição.",
+                    "Você é procurado por alguns policiais por crimes atribuidos a você. Se a acusação é verdadeira ou não só você sabe",
+                    "Você é procurado por toda a força policial da cidade por crimes atribuidos a você. Se a acusação é verdadeira ou não só você sabe",
+                    "Você é procurado pela força policial em nível estadual por crimes atribuidos a você. Se a acusação é verdadeira ou não só você sabe",
+                    "Você é procurado pelas forças federais por crimes atribuidos a você. Se a acusação é verdadeira ou não só você sabe",
+                    "Você é irritou o dono de uma pequena firma local.",
+                    "Uma grande corporação, com escritórios em todo o estado está atrás de você.",
+                    "Você é caçado por uma grande corporação com escritórios nas principais cidades do país.",
+                    "Uma empresa multinacional poderosa, com um forças militares, espiões e cyberninjas em toda a parte está atrás da sua cabeça.",
+                    "Você possuí alguma forma de desordem nervosa, provavelmente causado por pragas genéticas ou resquícios químicos no ambiente. Isso interfere na resposta de seus reflexos.",
+                    "Você sofre de constantes ataques de ansiedade e fobias. Isso interfere no seu auto-controle.",
+                    "Você ouve vozes, é violento, psicótico e depressivo. Isso interfere negativamente em seus reflexo e auto-controle."
+                ],
+                "o_que_vai_fazer_a_respeito": [
+                    "limpar seu nome.",
+                    "deixar pra lá e tentar esquecer.",
+                    "caçar os responsáveis e fazer com que paguem!",
+                    "tomar o que é seu por direito.",
+                    "salvar, se possivel, qualquer envolvido nessa situação."
+                ]
             },
-            {
-                "acontecimento": "sorte nas finanças",
-                "resultado": null
+            "amigos_e_inimigos": {
+                "nome": "Amigos e inimigos",
+                "sexo": [
+                    "Homem",
+                    "Mulher"
+                ],
+                "fez_um_inimigo": [
+                    "um ex-amigo",
+                    "um ex-amigo",
+                    "um ex-amigo",
+                    "um ex-amigo",
+                    "um ex-amigo",
+                    "um ex-amigo",
+                    "um ex-amigo",
+                    "um ex-amigo",
+                    "um ex-amigo",
+                    "um ex-amigo"
+                ],
+                "a_acusa": [
+                    "fez com que o outro perdesse seu prestigio ou status",
+                    "fez com que o outro perdesse seu prestigio ou status",
+                    "fez com que o outro perdesse seu prestigio ou status",
+                    "fez com que o outro perdesse seu prestigio ou status",
+                    "fez com que o outro perdesse seu prestigio ou status",
+                    "fez com que o outro perdesse seu prestigio ou status",
+                    "fez com que o outro perdesse seu prestigio ou status",
+                    "fez com que o outro perdesse seu prestigio ou status",
+                    "fez com que o outro perdesse seu prestigio ou status",
+                    "fez com que o outro perdesse seu prestigio ou status"
+                ],
+                "quem_se_deu_mal": [
+                    "eles o odeiam",
+                    "você os odeia",
+                    "o sentimento é mútuo"
+                ],
+                "o_que_vai_fazer_a_respeito": [
+                    "ser possuído por uma cólera assassina e arrancar a cabeça do outro",
+                    "ser possuído por uma cólera assassina e arrancar a cabeça do outro",
+                    "ser possuído por uma cólera assassina e arrancar a cabeça do outro",
+                    "ser possuído por uma cólera assassina e arrancar a cabeça do outro",
+                    "ser possuído por uma cólera assassina e arrancar a cabeça do outro"
+                ],
+                "o_que_ele_pode_fazer_contra_voce": [
+                    "apenas ele mesmo",
+                    "apenas ele mesmo",
+                    "apenas ele mesmo",
+                    "apenas ele mesmo",
+                    "apenas ele mesmo",
+                    "apenas ele mesmo"
+                ],
+                "fazendo_um_amigo": [
+                    "como um irmão/irmã mais velho para você",
+                    "como um irmão/irmã mais velho para você",
+                    "como um irmão/irmã mais velho para você",
+                    "como um irmão/irmã mais velho para você",
+                    "como um irmão/irmã mais velho para você",
+                    "como um irmão/irmã mais velho para você",
+                    "como um irmão/irmã mais velho para você",
+                    "como um irmão/irmã mais velho para você",
+                    "como um irmão/irmã mais velho para você",
+                    "como um irmão/irmã mais velho para você"
+                ]
             },
-            {
-                "acontecimento": "êxito no trabalho ou nos negócios",
-                "resultado": null
+            "vida_amorosa": {
+                "nome": "Vida amorosa",
+                "como_foi": [
+                    "um caso amoroso feliz",
+                    "um caso amoroso feliz",
+                    "um caso amoroso feliz",
+                    "um caso amoroso feliz"
+                ],
+                "caso_amoroso_tragico": [
+                    "seu amor morreu em um acidente",
+                    "seu amor morreu em um acidente",
+                    "seu amor morreu em um acidente",
+                    "seu amor morreu em um acidente",
+                    "seu amor morreu em um acidente",
+                    "seu amor morreu em um acidente",
+                    "seu amor morreu em um acidente",
+                    "seu amor morreu em um acidente",
+                    "seu amor morreu em um acidente",
+                    "seu amor morreu em um acidente"
+                ],
+                "caso_amoroso_problematico": [
+                    "familia/amigos de sua amante o odeiam",
+                    "familia/amigos de sua amante o odeiam",
+                    "familia/amigos de sua amante o odeiam",
+                    "familia/amigos de sua amante o odeiam",
+                    "familia/amigos de sua amante o odeiam",
+                    "familia/amigos de sua amante o odeiam",
+                    "familia/amigos de sua amante o odeiam",
+                    "familia/amigos de sua amante o odeiam",
+                    "familia/amigos de sua amante o odeiam",
+                    "familia/amigos de sua amante o odeiam"
+                ],
+                "sentimentos_mutuos": [
+                    "Ele/ela ainda o ama",
+                    "Ele/ela ainda o ama",
+                    "Ele/ela ainda o ama",
+                    "Ele/ela ainda o ama",
+                    "Ele/ela ainda o ama",
+                    "Ele/ela ainda o ama",
+                    "Ele/ela ainda o ama",
+                    "Ele/ela ainda o ama",
+                    "Ele/ela ainda o ama",
+                    "Ele/ela ainda o ama"
+                ]
             },
-            {
-                "acontecimento": "encontrou um mestre/sensei",
-                "resultado": null
-            },
-            {
-                "acontecimento": "encontrou um professor",
-                "resultado": null
-            },
-            {
-                "acontecimento": "um poderoso executivo de Corporação lhe deve um favor",
-                "resultado": null
-            },
-            {
-                "acontecimento": "um grupo de Nômades local considera você um amigo",
-                "resultado": null
-            },
-            {
-                "acontecimento": "fez um amigo na força policial",
-                "resultado": null
-            },
-            {
-                "acontecimento": "uma das gangues locais gosta de vôce",
-                "resultado": null
-            },
-            {
-                "acontecimento": "encontrou um instrutor de combate",
-                "resultado": null
+            "nada":{
+                "nome": "nada importante aconteceu neste ano"
             }
-        ],
-        "aconteceu_um_desastre": [
-            {
-                "acontecimento": "Débito ou perda financeira",
-                "resultado": null
-            },
-            {
-                "acontecimento": "Débito ou perda financeira",
-                "resultado": null
-            },
-            {
-                "acontecimento": "Débito ou perda financeira",
-                "resultado": null
-            },
-            {
-                "acontecimento": "Débito ou perda financeira",
-                "resultado": null
-            },
-            {
-                "acontecimento": "Débito ou perda financeira",
-                "resultado": null
-            },
-            {
-                "acontecimento": "Débito ou perda financeira",
-                "resultado": null
-            },
-            {
-                "acontecimento": "Débito ou perda financeira",
-                "resultado": null
-            },
-            {
-                "acontecimento": "Débito ou perda financeira",
-                "resultado": null
-            },
-            {
-                "acontecimento": "Débito ou perda financeira",
-                "resultado": null
-            },
-            {
-                "acontecimento": "Débito ou perda financeira",
-                "resultado": null
-            }
-        ],
-        "o_que_vai_fazer_a_respeito": [
-            "limpar seu nome.",
-            "deixar pra lá e tentar esquecer.",
-            "caçar os responsáveis e fazer com que paguem!",
-            "tomar o que é seu por direito.",
-            "salvar, se possivel, qualquer envolvido nessa situação."
-        ]
-    },
-    "amigos_e_inimigos": {
-        "nome": "Amigos e inimigos",
-        "sexo": [
-            "Homem",
-            "Mulher"
-        ],
-        "fez_um_inimigo": [
-            "um ex-amigo",
-            "um ex-amigo",
-            "um ex-amigo",
-            "um ex-amigo",
-            "um ex-amigo",
-            "um ex-amigo",
-            "um ex-amigo",
-            "um ex-amigo",
-            "um ex-amigo",
-            "um ex-amigo"
-        ],
-        "a_acusa": [
-            "fez com que o outro perdesse seu prestigio ou status",
-            "fez com que o outro perdesse seu prestigio ou status",
-            "fez com que o outro perdesse seu prestigio ou status",
-            "fez com que o outro perdesse seu prestigio ou status",
-            "fez com que o outro perdesse seu prestigio ou status",
-            "fez com que o outro perdesse seu prestigio ou status",
-            "fez com que o outro perdesse seu prestigio ou status",
-            "fez com que o outro perdesse seu prestigio ou status",
-            "fez com que o outro perdesse seu prestigio ou status",
-            "fez com que o outro perdesse seu prestigio ou status"
-        ],
-        "quem_se_deu_mal": [
-            "eles o odeiam",
-            "você os odeia",
-            "o sentimento é mútuo"
-        ],
-        "o_que_vai_fazer_a_respeito": [
-            "ser possuído por uma cólera assassina e arrancar a cabeça do outro",
-            "ser possuído por uma cólera assassina e arrancar a cabeça do outro",
-            "ser possuído por uma cólera assassina e arrancar a cabeça do outro",
-            "ser possuído por uma cólera assassina e arrancar a cabeça do outro",
-            "ser possuído por uma cólera assassina e arrancar a cabeça do outro"
-        ],
-        "o_que_ele_pode_fazer_contra_voce": [
-            "apenas ele mesmo",
-            "apenas ele mesmo",
-            "apenas ele mesmo",
-            "apenas ele mesmo",
-            "apenas ele mesmo",
-            "apenas ele mesmo"
-        ],
-        "fazendo_um_amigo": [
-            "como um irmão/irmã mais velho para você",
-            "como um irmão/irmã mais velho para você",
-            "como um irmão/irmã mais velho para você",
-            "como um irmão/irmã mais velho para você",
-            "como um irmão/irmã mais velho para você",
-            "como um irmão/irmã mais velho para você",
-            "como um irmão/irmã mais velho para você",
-            "como um irmão/irmã mais velho para você",
-            "como um irmão/irmã mais velho para você",
-            "como um irmão/irmã mais velho para você"
-        ]
-    },
-    "vida_amorosa": {
-        "nome": "Vida amorosa",
-        "como_foi": [
-            "um caso amoroso feliz",
-            "um caso amoroso feliz",
-            "um caso amoroso feliz",
-            "um caso amoroso feliz"
-        ],
-        "caso_amoroso_tragico": [
-            "seu amor morreu em um acidente",
-            "seu amor morreu em um acidente",
-            "seu amor morreu em um acidente",
-            "seu amor morreu em um acidente",
-            "seu amor morreu em um acidente",
-            "seu amor morreu em um acidente",
-            "seu amor morreu em um acidente",
-            "seu amor morreu em um acidente",
-            "seu amor morreu em um acidente",
-            "seu amor morreu em um acidente"
-        ],
-        "caso_amoroso_problematico": [
-            "familia/amigos de sua amante o odeiam",
-            "familia/amigos de sua amante o odeiam",
-            "familia/amigos de sua amante o odeiam",
-            "familia/amigos de sua amante o odeiam",
-            "familia/amigos de sua amante o odeiam",
-            "familia/amigos de sua amante o odeiam",
-            "familia/amigos de sua amante o odeiam",
-            "familia/amigos de sua amante o odeiam",
-            "familia/amigos de sua amante o odeiam",
-            "familia/amigos de sua amante o odeiam"
-        ],
-        "sentimentos_mutuos": [
-            "Ele/ela ainda o ama",
-            "Ele/ela ainda o ama",
-            "Ele/ela ainda o ama",
-            "Ele/ela ainda o ama",
-            "Ele/ela ainda o ama",
-            "Ele/ela ainda o ama",
-            "Ele/ela ainda o ama",
-            "Ele/ela ainda o ama",
-            "Ele/ela ainda o ama",
-            "Ele/ela ainda o ama"
-        ]
+        }
     }
 }

@@ -33,15 +33,46 @@ func.idadeIrmaos = _ => {
 
 func.idade = _ => 16 + func.dado(6) + func.dado(6)
 
-func.minhaIdade = func.idade()
+func.defineEvento = eventos => {
+    const roll = func.dado(10); 
+    return roll < 4 ? 0 : roll < 7 ? 1 : roll < 9 ? 2 : 3
+}
 
-func.section1 = _ => {
+func.filtraResp = string => {
+    
+    let st = string;
+
+    if (string.indexOf('{1D10x100}') !== -1) st = string.replace('{1D10x100}', func.dado(10) * 1000)
+
+    if (string.indexOf('{1D10}') !== -1) st = string.replace('{1D10}', func.dado(10))
+
+    console.log(st)
+    
+    return st
+
+}
+
+func.gep = ev => {
+
+    const bol = func.dado(2) - 1;
+
+    return {
+        nome: ev.nome,
+        aconteceu_um_desastre: !!bol && func.filtraResp(func.rollArr(ev.aconteceu_um_desastre)),
+        o_que_vai_fazer_a_respeito: !!bol && func.rollArr(ev.o_que_vai_fazer_a_respeito),
+        voce_se_deu_bem: !bol && func.filtraResp(func.rollArr(ev.voce_se_deu_bem))
+    }
+    
+}
+
+
+func.section1 = ($idade) => {
     const $oe = Fluxo.origens_e_estilo
     const origemRoll = func.dado($oe.origem_etnica.length) - 1
     
     return {
         section_nome: $oe.nome,
-        idade: func.minhaIdade,
+        idade: $idade,
         roupas: func.rollArr($oe.roupas),
         cabelos: func.rollArr($oe.cabelos),
         detalhes: func.rollArr($oe.detalhes),
@@ -82,15 +113,29 @@ func.section3 = _ => {
     }
 } 
 
-func.section4 = _ => {
-    const $gp = Fluxo.grandes_problemas_exitos;
+func.section4 = $idade => {
+    const anos = $idade - 16;
+    const $ev = Fluxo.eventos_da_vida;
+    
+    const evento_deste_ano = _ => {
+        const roll = func.dado(10)
+        return roll < 4 ? func.gep($ev.eventos.grandes_problemas_exitos) : roll < 7 ? 'Amigos & Inimigos' : roll < 9 ? 'Envolvimento romantico' : 'Nada aconteceu este ano.'
+    }
+
+    return {
+        nome: $ev.nome,
+        evento_do_ano: evento_deste_ano()
+    }
+
+    
 } 
 
-func.init = _ => { 
+func.init = idade => {
     const obj = JSON.stringify({ 
-        section1: func.section1(), 
+        section1: func.section1(idade), 
         section2: func.section2(),
-        section3: func.section3()
+        section3: func.section3(),
+        section4: func.section4(idade),
     }) 
     return obj
 }

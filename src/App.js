@@ -12,7 +12,7 @@ function App() {
   // $f.test();
   console.log(Fluxo)
 
-  const [initial,setInitial] = useState($f.init())
+  const [initial,setInitial] = useState($f.init($f.idade()))
   
 
 
@@ -24,7 +24,7 @@ function App() {
       {initial}
       </span>
       <br/>
-      <button onClick={ _ => setInitial($f.init())}>Re-rolar</button>
+      <button onClick={ _ => setInitial($f.init($f.idade()))}>Re-rolar</button>
     </div>
   );
 }
