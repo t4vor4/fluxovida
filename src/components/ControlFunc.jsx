@@ -26,6 +26,16 @@ func.$irmaos = (obj,qtd) => {
     return x
 }
 
+func.$amigos = ev => {
+    console.log(ev)
+    // const obj = Fluxo.antecedente_familiar.irmaos
+    return{
+        nome: "nome generico amigo",
+        genero: func.rollArr(ev.sexo),
+        relacionamento: func.rollArr(ev.fazendo_um_amigo)
+    }
+}
+
 func.idadeIrmaos = _ => {
     const r = func.dado(10);
     return r <= 6 ? 1 : r < 10 ? 0 : 2
@@ -45,8 +55,6 @@ func.filtraResp = string => {
     if (string.indexOf('{1D10x100}') !== -1) st = string.replace('{1D10x100}', func.dado(10) * 1000)
 
     if (string.indexOf('{1D10}') !== -1) st = string.replace('{1D10}', func.dado(10))
-
-    console.log(st)
     
     return st
 
@@ -61,6 +69,19 @@ func.gep = ev => {
         aconteceu_um_desastre: !!bol && func.filtraResp(func.rollArr(ev.aconteceu_um_desastre)),
         o_que_vai_fazer_a_respeito: !!bol && func.rollArr(ev.o_que_vai_fazer_a_respeito),
         voce_se_deu_bem: !bol && func.filtraResp(func.rollArr(ev.voce_se_deu_bem))
+    }
+    
+}
+
+func.aei = ev => {
+    const bol = 0//func.dado(2) - 1;
+
+    return {
+        nome: ev.nome,
+        info_amigo: !bol && func.$amigos(ev)
+        // aconteceu_um_desastre: !!bol && func.filtraResp(func.rollArr(ev.aconteceu_um_desastre)),
+        // o_que_vai_fazer_a_respeito: !!bol && func.rollArr(ev.o_que_vai_fazer_a_respeito),
+        // voce_se_deu_bem: !bol && func.filtraResp(func.rollArr(ev.voce_se_deu_bem))
     }
     
 }
@@ -114,17 +135,21 @@ func.section3 = _ => {
 } 
 
 func.section4 = $idade => {
-    const anos = $idade - 16;
+    const anos = 1//$idade - 16;
     const $ev = Fluxo.eventos_da_vida;
+
+    const eventos_da_vida = []
     
     const evento_deste_ano = _ => {
-        const roll = func.dado(10)
-        return roll < 4 ? func.gep($ev.eventos.grandes_problemas_exitos) : roll < 7 ? 'Amigos & Inimigos' : roll < 9 ? 'Envolvimento romantico' : 'Nada aconteceu este ano.'
+        const roll = 4//func.dado(10)
+        return roll < 4 ? func.gep($ev.eventos.grandes_problemas_exitos) : roll < 7 ? func.aei($ev.eventos.amigos_e_inimigos) : roll < 9 ? 'Envolvimento romantico' : 'Nada aconteceu este ano.'
     }
+
+    for (let i = 0; i < anos; i++) eventos_da_vida.push(evento_deste_ano())
 
     return {
         nome: $ev.nome,
-        evento_do_ano: evento_deste_ano()
+        eventos_da_vida: eventos_da_vida
     }
 
     
