@@ -9,22 +9,25 @@ import './App.css';
 
 
 function App() {
-  // $f.test();
-  console.log(Fluxo)
 
-  const [initial,setInitial] = useState($f.init($f.idade()))
-  
+  // console.log(Fluxo)
 
+  const [initial,setInitial] = useState(JSON.parse($f.init($f.idade())))
+
+  console.log(initial.section1)
+  console.log(initial.section2)
+  console.log(initial.section3)
+  console.log(initial.section4)
 
   
   return (
     <div className="App">
       <h1>Teste</h1>
       <span>
-      {initial}
+      {/* {initial} */}
       </span>
       <br/>
-      <button onClick={ _ => setInitial($f.init($f.idade()))}>Re-rolar</button>
+      <button onClick={ _ => setInitial(JSON.parse($f.init($f.idade())))}>Re-rolar</button>
     </div>
   );
 }

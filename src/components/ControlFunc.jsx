@@ -28,11 +28,21 @@ func.$irmaos = (obj,qtd) => {
 
 func.$amigos = ev => {
     console.log(ev)
+    return{
+        relacionamento: func.rollArr(ev.fazendo_um_amigo)
+    }
+}
+
+func.$inimigos = ev => {
+    console.log(ev)
     // const obj = Fluxo.antecedente_familiar.irmaos
     return{
-        nome: "nome generico amigo",
-        genero: func.rollArr(ev.sexo),
-        relacionamento: func.rollArr(ev.fazendo_um_amigo)
+        fez_um_inimigo: func.rollArr(ev.fez_um_inimigo),
+        a_causa: func.rollArr(ev.a_causa),
+        quem_se_deu_mal: func.rollArr(ev.quem_se_deu_mal),
+        o_que_vai_fazer_a_respeito: func.rollArr(ev.o_que_vai_fazer_a_respeito),
+        o_que_ele_pode_fazer_contra_voce: func.rollArr(ev.o_que_ele_pode_fazer_contra_voce),
+        
     }
 }
 
@@ -73,19 +83,46 @@ func.gep = ev => {
     
 }
 
+func.origens_e_motivacoes_char = _ => {
+    const $oe = Fluxo.origens_e_estilo
+    const origemRoll = func.dado($oe.origem_etnica.length) - 1
+    const gen = func.dado(2) - 1 ? 'homem' : 'mulher'
+
+    return {
+        origens_estilo: {
+            nome_char: gen === 'homem' ? 'Cara Genérico' : 'Garota Genérica',
+            roupas: func.rollArr($oe.roupas),
+            cabelos: func.rollArr($oe.cabelos),
+            detalhes: func.rollArr($oe.detalhes),
+            origem: $oe.origem_etnica[origemRoll].origem,
+            lingua: func.rollArr($oe.origem_etnica[origemRoll].lingua)
+        },
+    }
+}
+
 func.aei = ev => {
-    const bol = 0//func.dado(2) - 1;
+    const bol = func.dado(2) - 1;    
 
     return {
         nome: ev.nome,
-        info_amigo: !bol && func.$amigos(ev)
-        // aconteceu_um_desastre: !!bol && func.filtraResp(func.rollArr(ev.aconteceu_um_desastre)),
-        // o_que_vai_fazer_a_respeito: !!bol && func.rollArr(ev.o_que_vai_fazer_a_respeito),
-        // voce_se_deu_bem: !bol && func.filtraResp(func.rollArr(ev.voce_se_deu_bem))
+        origens_e_motivacoes: func.origens_e_motivacoes_char(),
+        info_amigo: !bol && func.$amigos(ev),
+        info_inimigo: !!bol && func.$inimigos(ev)
     }
     
 }
 
+func.va = ev => {
+    const $roll = func.dado(10)
+    const val = $roll < 5 ? 0 : $roll === 5 ? 1 : $roll < 8 ? 2 : 3
+    return {
+        nome: ev.nome,
+        como_foi: ev.como_foi[val],
+        caso_amoroso_tragico: val === 1 && func.rollArr(ev.caso_amoroso_tragico),
+        caso_amoroso_problematico: val === 2 && func.rollArr(ev.caso_amoroso_problematico),
+        sentimentos_mutuos: func.rollArr(ev.sentimentos_mutuos),
+    }
+}
 
 func.section1 = ($idade) => {
     const $oe = Fluxo.origens_e_estilo
@@ -135,14 +172,14 @@ func.section3 = _ => {
 } 
 
 func.section4 = $idade => {
-    const anos = 1//$idade - 16;
+    const anos = $idade - 16;
     const $ev = Fluxo.eventos_da_vida;
 
     const eventos_da_vida = []
     
     const evento_deste_ano = _ => {
-        const roll = 4//func.dado(10)
-        return roll < 4 ? func.gep($ev.eventos.grandes_problemas_exitos) : roll < 7 ? func.aei($ev.eventos.amigos_e_inimigos) : roll < 9 ? 'Envolvimento romantico' : 'Nada aconteceu este ano.'
+        const roll = func.dado(10)
+        return roll < 4 ? func.gep($ev.eventos.grandes_problemas_exitos) : roll < 7 ? func.aei($ev.eventos.amigos_e_inimigos) : roll < 9 ? func.va($ev.eventos.vida_amorosa) : 'Nada aconteceu este ano.'
     }
 
     for (let i = 0; i < anos; i++) eventos_da_vida.push(evento_deste_ano())
@@ -156,13 +193,16 @@ func.section4 = $idade => {
 } 
 
 func.init = idade => {
-    const obj = JSON.stringify({ 
+    const obj = { 
         section1: func.section1(idade), 
         section2: func.section2(),
         section3: func.section3(),
         section4: func.section4(idade),
-    }) 
-    return obj
+    }
+    
+    return JSON.stringify(obj)
+    
+    // return obj
 }
 
 export default func
