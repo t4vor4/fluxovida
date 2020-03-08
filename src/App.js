@@ -24,7 +24,7 @@ function App() {
 
 
   useEffect(() => {
-    console.log(s2.irmaos);
+    // console.log(s2.irmaos);
     // console.log(initial.section2)
     // console.log(initial.section3)
     // console.log(initial.section4)
@@ -38,43 +38,27 @@ function App() {
       <section>
         <h2>{s1.section_nome}</h2>
         <h3>Roupas e estilo pessoal</h3>
-        <ul>
-          <li>Idade: {s1.idade} anos</li>
-          <li>Roupas: {s1.roupas}</li>
-          <li>Cabelos: {s1.cabelos}</li>
-          <li>Detalhes marcantes: {s1.detalhes}</li>
-        </ul>
-        <h3>Origens étnicas</h3>
-        <ul>
-          <li>Origem: {s1.origem}</li>
-          <li>Idioma natal: {s1.lingua}</li>
-        </ul>
+        <p>Você tem {s1.idade} anos.</p>
+        <p>Você veste {s1.roupas}. Seu cabelo é {s1.cabelos} e você {s1.detalhes}.</p>
+        <p>Você tem origem {s1.origem} e sua língua materna é {s1.lingua}</p>
       </section>
 
       <section>
         <h2>Antecedente Familiar</h2>
         <ul>
-          <li>Nível Familiar: {s2.nivel_familiar}</li>
-          <li>Seus país: {s2.pais}</li>
-          {!!s2.algo_aconteceu_a_seus_pais && <li>O que houve com seus país? {s2.algo_aconteceu_a_seus_pais}</li>}
-          <li>Status Familiar: {s2.status_familiar}</li>
-          {!!s2.tragedia_familiar && <li>Tragédia familiar: {s2.tragedia_familiar}</li>}
-          <li>O ambiente de sua infância: {s2.o_ambiente_de_sua_infancia}</li>
+          <p>O nível de sua familia é o de {s2.nivel_familiar}. {s2.pais} {!!s2.algo_aconteceu_a_seus_pais && s2.algo_aconteceu_a_seus_pais}.</p>
+          <p>{s2.status_familiar} {!!s2.tragedia_familiar && s2.tragedia_familiar}.</p>
+          <p>{s2.o_ambiente_de_sua_infancia}</p>
         </ul>
         <h3>Irmãos</h3>
         {<Compirmaos irmaos={s2.irmaos} />}
-
       </section>
 
       <section>
         <h2>Motivações</h2>
-        <ul>
-  <li>Sua personalidade: {s3.caracteristicas_de_sua_personalidade}</li>
-  <li>A quem você dá mais valor? {s3.pessoa_que_mais_valoriza}</li>
-  <li>O mais importante para você é {s3.o_que_mais_valoriza}</li>
-        <li>Qual sua opinião em relação as pessoas em geral? {s3.qual_a_sua_opiniao_em_relacao_as_pessoas}</li>
-        <li>O objeto pelo qual você tem mais carinho é {s3.seu_objeto_mais_estimado}</li>
-        </ul>
+        <p>Você é uma pessoa {s3.caracteristicas_de_sua_personalidade}.</p>
+        <p>A pessoa que você mais valoriza é {s3.pessoa_que_mais_valoriza}. Você valoriza {s3.o_que_mais_valoriza} acima de tudo e sua opinião em relação às outras pessoas é {s3.qual_a_sua_opiniao_em_relacao_as_pessoas}.</p>
+        <p>O objeto que você mais gosta é {s3.seu_objeto_mais_estimado}.</p>
       </section>
 
       <section>

@@ -10,7 +10,7 @@
             "roupas de alta costura",
             "roupas camufladas",
             "roupas normais",
-            "o corpo com apenas duas gotas te perfume, exibindo sua nudez",
+            "o corpo com apenas duas gotas de perfume, exibindo sua nudez por onde anda",
             "o estilo mendigo chique"
         ],
         "cabelos": [
@@ -39,13 +39,13 @@
         ],
         "origem_etnica": [
             {
-                "origem": "anglo-americano",
+                "origem": "anglo-americana",
                 "lingua": [
                     "inglês"
                 ]
             },
             {
-                "origem": "africano",
+                "origem": "africana",
                 "lingua": [
                     "banto",
                     "fante",
@@ -56,19 +56,19 @@
                 ]
             },
             {
-                "origem": "japonês",
+                "origem": "japonesa",
                 "lingua": [
                     "japonês"
                 ]
             },
             {
-                "origem": "coreano",
+                "origem": "coreana",
                 "lingua": [
                     "coreano"
                 ]
             },
             {
-                "origem": "europa central/sovietico",
+                "origem": "da europa central",
                 "lingua": [
                     "bulgaro",
                     "russo",
@@ -79,7 +79,7 @@
                 ]
             },
             {
-                "origem": "ilhas do pacífico",
+                "origem": "das ilhas do pacífico",
                 "lingua": [
                     "micronésio",
                     "tagalog",
@@ -91,7 +91,7 @@
                 ]
             },
             {
-                "origem": "chinês/sudeste asiático",
+                "origem": "chinêsa ou do udeste asiático",
                 "lingua": [
                     "Burmanês",
                     "cantonês",
@@ -102,27 +102,27 @@
                 ]
             },
             {
-                "origem": "afro-americano",
+                "origem": "afro-americana",
                 "lingua": [
                     "inglês"
                 ]
             },
             {
-                "origem": "hispano-americano",
+                "origem": "hispano-americana",
                 "lingua": [
                     "inglês",
                     "espanhol"
                 ]
             },
             {
-                "origem": "américa central/sul",
+                "origem": "latino-americana",
                 "lingua": [
                     "espanhol",
                     "portugûes"
                 ]
             },
             {
-                "origem": "europeu",
+                "origem": "européia",
                 "lingua": [
                     "francês",
                     "alemão",
@@ -222,60 +222,60 @@
     },
     "antecedente_familiar": {
         "nivel_familiar": [
-            "executivo de corporação",
-            "gerente de corporação",
-            "técnico de corporação",
-            "membro de um grupo nômade",
-            "bando de piratas",
-            "gangue familiar",
-            "chefão do crime",
-            "morador pobre de uma zona de combate",
-            "desabrigado urbano",
-            "família de megaurbanização"
+            "executivos de corporação",
+            "gerentes de corporação",
+            "técnicos de corporação",
+            "membros de um grupo nômade",
+            "um bando de piratas",
+            "uma gangue familiar", 
+            "chefões do crime",
+            "moradores pobres de uma zona de combate",
+            "desabrigados urbano",
+            "moradores de uma megaurbanização"
         ],
         "pais": [
-            "Ambos estão vivos",
-            "Algo aconteceu com um de seus pais ou ambos"
+            "Seus estão ambos vivos",
+            "Houve uma situação envolvendo seus pais e"
         ],
         "algo_aconteceu_a_seus_pais": [
-            "Seus pais morreram em combate",
-            "Seus pais morreram em um acidente",
-            "Seus pais foram assassinados",
-            "Seus pais estão sofrendo de amnésia e não se lambram de você",
-            "Você nunca conheceu seus pais",
-            "Seus pais estão escondidos para protegê-lo",
-            "Você foi deixado com algum parente para sua própria segurança",
-            "Você cresceu nas ruas e nunca teve pais",
-            "Seus pais o deram para a adoção",
-            "Seus pais o venderam por dinheiro"
+            "eles morreram em combate",
+            "eles morreram em um acidente",
+            "eles foram assassinados",
+            "eles estão sofrendo de amnésia e não se lambram de você",
+            "você nunca conheceu seus pais",
+            "eles estão escondidos para protegê-lo",
+            "você foi deixado com algum parente para sua própria segurança",
+            "você cresceu nas ruas e nunca teve pais",
+            "eles o deram para a adoção",
+            "eles o venderam por dinheiro"
         ],
         "status_familiar": [
-            "O status da sua família está em perigo e você corre o risco de perder tudo (se já não perdeu)",
-            "O status familiar vai bem, mesmo se seus pais estiverem desaparecidos ou mortos"
+            "Hoje a situação da sua família é delicada",
+            "Hoje a situação da sua família é estável, mesmo se seus pais estiverem desaparecidos ou mortos"
         ],
         "tragedia_familiar": [
-            "Sua familia perdeu tudo devido a uma traição",
-            "Sua familia perdeu tudo devido a má administração",
-            "Sua familia foi exilada, ou de alguma outra forma expulsa de sua casa, nação ou Corporação de origem",
-            "Sua familia está presa e você foi o único que conseguiu escapar",
-            "Sua familia desapareceu e você é o único membro remanescente",
-            "Sua familia morreu ou foi assassinada e você é o único que sobreviveu",
-            "Sua familia está envolvida em uma conspiração, organização ou associação, como uma família do crime ou um grupo revolucionário",
-            "Sua familia se espalhou pelos quatro cantos do mundo devido a uma catastrofe",
-            "Sua familia é atormentada por uma guerra familiar que já dura várias gerações",
-            "Você é herdeiro de uma dívida familiar. você deve honrar esta dívida antes de poder prosseguir com sua vida"
+            "e vocês perderam tudo devido a uma traição",
+            "e vocês perderam tudo devido a má administração",
+            "e vocês foram exilados, ou de alguma outra forma expulsos de sua casa, nação ou Corporação de origem",
+            "e seus parentes estão presos e você foi o único que conseguiu escapar",
+            "e seus parentes desapareceram e você é o único membro remanescente",
+            "e seus parentes morreram ou foram assassinados e você é o único que sobreviveu",
+            "e seus parentes estão envolvidos em uma conspiração, organização ou associação, como uma família do crime ou um grupo revolucionário",
+            "vocês se espalharam pelos quatro cantos do mundo devido a uma catastrofe",
+            "e vocês são atormentados por uma guerra familiar que já dura várias gerações",
+            "e você é herdeiro de uma dívida familiar. você deve honrar esta dívida antes de poder prosseguir com sua vida"
         ],
         "o_ambiente_de_sua_infancia": [
-            "Nas ruas, sem a supervisão de um adulto.",
-            "num seguro bairro Corporativo.",
-            "num grupo nômade, indo de cidade em cidade.",
-            "numa vizinhança que foi alto nível e agora está em decadência.",
-            "numa zona no centro da cidade, protegida pela Corporação.",
-            "no coração de uma zona de combate.",
-            "numa pequena vila ou cidadela longe da cidade.",
-            "numa megaurbanização.",
-            "com um grupo de piratas aquáticos.",
-            "numa fazenda controlada por uma Corporação ou nas dependências de um centro de pesquisa."
+            "Você foi criado nas ruas, sem a supervisão de um adulto.",
+            "Você sempre viveu em um seguro bairro Corporativo.",
+            "Você fo criado em um grupo nômade, indo de cidade em cidade.",
+            "Você viveu numa vizinhança que foi alto nível e agora está em decadência.",
+            "Você cresceu numa zona no centro da cidade, protegida pela Corporação.",
+            "Você cresceu no coração de uma zona de combate.",
+            "Você viveu numa pequena vila ou cidadela longe da cidade.",
+            "Você cresceu em uma megaurbanização.",
+            "Você creceu com um grupo de piratas aquáticos.",
+            "Você foi criado numa fazenda controlada por uma Corporação ou nas dependências de um centro de pesquisa."
         ],
         "irmaos": {
             "sexo": [
@@ -299,52 +299,52 @@
     "motivacoes": {
         "nome": "Motivações",
         "caracteristicas_de_sua_personalidade": [
-            "Tímido e reservado",
-            "Rebelde, anti-social e violento",
-            "Arrogante, orgulhoso e distante",
-            "Mal-humorado, precipitado e teimoso",
-            "Exigente, meticuloso e nervoso",
-            "Estável e sério",
-            "Tolo e cabeça de vento",
-            "Sorrateiro e enganador",
-            "Intelectual e isolado",
-            "Amigável e expansivo"
+            "tímida e reservada",
+            "rebelde, anti-social e violenta",
+            "arrogante, orgulhosa e distante",
+            "mal-humorada, precipitada e teimosa",
+            "exigente, meticulosa e nervosa",
+            "estável e séria",
+            "tola e cabeça de vento",
+            "sorrateira e enganadora",
+            "intelectual e isolada",
+            "amigável e expansiva"
         ],
         "pessoa_que_mais_valoriza": [
-            "O pai ou a mãe",
-            "Um irmão ou uma irmã",
-            "Um(a) amante em especial",
-            "Um amigo",
-            "Você mesmo",
-            "Um animal de estimação",
-            "Um professor ou mentor",
-            "Uma personalidade pública",
-            "Um herói pessoal",
-            "Ninguém"
+            "seu pai ou sua mãe",
+            "um irmão ou uma irmã",
+            "um(a) amante em especial",
+            "um amigo",
+            "você mesmo",
+            "um animal de estimação",
+            "um professor ou mentor",
+            "uma personalidade pública",
+            "um herói pessoal",
+            "ninguém"
         ],
         "o_que_mais_valoriza": [
-            "O dinheiro",
-            "A honra",
-            "Sua palavra",
-            "A honestidade",
-            "O conhecimento",
-            "A vingança",
-            "O amor",
-            "O poder",
-            "A diversão",
-            "A amizade"
+            "o dinheiro",
+            "a honra",
+            "sua palavra",
+            "a honestidade",
+            "o conhecimento",
+            "a vingança",
+            "o amor",
+            "o poder",
+            "a diversão",
+            "a amizade"
         ],
         "qual_a_sua_opiniao_em_relacao_as_pessoas": [
             "Neutra",
             "Neutra",
-            "Gosta de quase todo mundo",
-            "Odeia quase todo mundo",
-            "As pessoas são ferramentas. Use-as para conseguir seus objetivos e depois se livre delas",
-            "Todas as pessoas são indivíduos de valor",
-            "As pessoas são obstáculos a serem destruídos se cruzarem o seu caminho",
-            "Não se pode confiar nos outros. Você não depende de ninguém",
-            "Acabe com todos eles e dê seus lugares para as baratas",
-            "As pessoas são maravilhosas"
+            "que gosta de quase todo mundo",
+            "que odeia quase todo mundo",
+            "que as pessoas são ferramentas. Use-as para conseguir seus objetivos e depois se livre delas",
+            "que todas as pessoas são indivíduos de valor",
+            "que as pessoas são obstáculos a serem destruídos se cruzarem o seu caminho",
+            "que não se pode confiar nos outros. Você não depende de ninguém",
+            "que se deve acabar com todas elas e deixar os seus lugares para as baratas",
+            "que as pessoas são maravilhosas"
         ],
         "seu_objeto_mais_estimado": [
             "uma arma",
