@@ -4,14 +4,14 @@
         "roupas": [
             "couro",
             "jeans",
-            "terno escuro",
-            "macacão",
-            "minissaia",
-            "alta costura",
-            "camuflada",
+            "um terno escuro",
+            "um macacão",
+            "uma minissaia",
+            "roupas de alta costura",
+            "roupas camufladas",
             "roupas normais",
-            "nu",
-            "mendigo chique"
+            "o corpo com apenas duas gotas te perfume, exibindo sua nudez",
+            "o estilo mendigo chique"
         ],
         "cabelos": [
             "moicano",
@@ -20,21 +20,22 @@
             "solto e espalhado",
             "careca",
             "com mechas",
-            "Pintados",
+            "pintado com uma cor vibrante",
+            "pintado com cors vibrantes",
             "curto e arrumado",
             "curto e encaracolado",
             "longo e liso"
         ],
         "detalhes": [
-            "tatuagens",
-            "óculos espelhados",
-            "cicatrizes rituais",
-            "luvas com pinos",
-            "piercings e/ou alargadores",
-            "Unhas compridas",
-            "botas de salto alto",
-            "lentes de contato estranhas",
-            "luvas sem dedo"
+            "é identifícavel por suas tatuagens",
+            "é reconhecível por seus distintos óculos espelhados",
+            "é identificavel por suas cicatrizes rituais",
+            "é notavel são suas luvas com pinos",
+            "é notavel por seus piercings e/ou alargadores",
+            "é reconhecível por suas unhas compridas e muito bem cuidadas",
+            "é reconhecível por suas botas de salto alto",
+            "é identificavel por usar lentes de contato estranhas",
+            "é notavel por usar luvas sem dedo"
         ],
         "origem_etnica": [
             {
@@ -278,20 +279,20 @@
         ],
         "irmaos": {
             "sexo": [
-                "Homem",
-                "Mulher"
+                "um irmão",
+                "uma irmã"
             ],
             "idade": [
-                "mais novo",
-                "mais velho",
-                "gêmeo"
+                "mais nov{artigo} que você",
+                "mais velh{artigo} que você",
+                "seu irmão gême{artigo}"
             ],
             "sentimentos": [
-                "O irmão não gosta de você",
-                "O irmão gosta de você",
-                "O irmão não gosta nem desgosta de você",
-                "ele o adora como sendo um herói",
-                "ele o odeia"
+                "não gosta de você",
+                "gosta de você",
+                "é indiferente à você",
+                "o adora como sendo um herói",
+                "o odeia"
             ]
         }
     },

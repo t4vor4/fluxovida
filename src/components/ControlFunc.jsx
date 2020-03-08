@@ -13,13 +13,24 @@ func.rollArr = arr => arr[func.dado(arr.length) - 1]
 func.handleChange = (event, $state) => $state(event.target.value)
 
 func.$irmaos = (obj,qtd) => {
+    const {roupas,cabelos,detalhes} = Fluxo.origens_e_estilo;
+    const $gen = (func.dado(obj.sexo.length) - 1);
+    const $artigo = !!$gen ? ['a','uma','ela'] : ['o','um','ele'];
     const x = []
+    const filtraIrmaos = (string,gen) => {
+        let st = string;
+        if (string.indexOf('{artigo}') !== -1) st = string.replace('{artigo}', !!gen ? 'a' : 'o');
+        return st;
+    }
+
     for (let i = 0; i < qtd; i++) {
         const irmaos = {
             nome: "nome generico",
-            genero: func.rollArr(obj.sexo),
-            idade: obj.idade[func.idadeIrmaos()],
-            sentimentos: func.rollArr(obj.sentimentos)
+            genero: obj.sexo[$gen],
+            artigo: $artigo,
+            idade: filtraIrmaos(obj.idade[func.idadeIrmaos()],$gen),
+            sentimentos: func.rollArr(obj.sentimentos),
+            estilo: `${$artigo[2]} veste ${func.rollArr(roupas)}, seu cabelo é ${func.rollArr(cabelos)} e ${$artigo[2]} ${func.rollArr(detalhes)}.`
         }
         x.push(irmaos)
     }
@@ -27,14 +38,14 @@ func.$irmaos = (obj,qtd) => {
 }
 
 func.$amigos = ev => {
-    console.log(ev)
+    // console.log(ev)
     return{
         relacionamento: func.rollArr(ev.fazendo_um_amigo)
     }
 }
 
 func.$inimigos = ev => {
-    console.log(ev)
+    // console.log(ev)
     // const obj = Fluxo.antecedente_familiar.irmaos
     return{
         fez_um_inimigo: func.rollArr(ev.fez_um_inimigo),
@@ -141,6 +152,7 @@ func.section1 = ($idade) => {
 
 func.section2 = _ => {
     const $af = Fluxo.antecedente_familiar
+    
     const $statusPais = (func.dado(10)) < 7
     const statusFam = (func.dado(2)) - 1
     let $qtd = func.dado(10)
@@ -154,7 +166,7 @@ func.section2 = _ => {
         status_familiar: $af.status_familiar[statusFam],
         tragedia_familiar: !statusFam ? func.rollArr($af.tragedia_familiar) : false,
         o_ambiente_de_sua_infancia: func.rollArr($af.o_ambiente_de_sua_infancia),
-        irmaos: !!$qtd ? func.$irmaos($af.irmaos,$qtd) : 'Não possuí irmãos. É filho único.'
+        irmaos: !!$qtd && func.$irmaos($af.irmaos,$qtd)
     }
 }
 
