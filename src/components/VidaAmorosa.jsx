@@ -1,15 +1,21 @@
 import React from 'react';
 
 export default (props) => {
+    console.log(props.content)
+    const {
+        nome,
+        como_foi,
+        caso_amoroso_tragico,
+        caso_amoroso_problematico,
+        sentimentos_mutuos
+
+    } = props.content;
     return (
-        <div className="flux_inner_cont flux_inner_cont--3">
-            <h2>Vida amorosa</h2>
-            <ul>
-                <li>Como foi?</li>
-                <li>Caso amoroso trágico.</li>
-                <li>Caso amoroso problemático.</li>
-                <li>Sentimentos mútuos:</li>
-            </ul>
-        </div>
+        <>
+        <h4>{nome}</h4>
+    <p>Você teve {como_foi}. {!!caso_amoroso_tragico && caso_amoroso_tragico}{!!caso_amoroso_problematico && caso_amoroso_problematico} {!!sentimentos_mutuos && `Hoje ${sentimentos_mutuos}`}</p>
+        <p></p>
+
+        </>
     )
 }

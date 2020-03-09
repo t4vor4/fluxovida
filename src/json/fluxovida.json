@@ -221,6 +221,7 @@
         ]
     },
     "antecedente_familiar": {
+        "nome": "Antecedente Familiar",
         "nivel_familiar": [
             "executivos de corporação",
             "gerentes de corporação",
@@ -366,18 +367,18 @@
             "grandes_problemas_exitos": {
                 "nome": "Grandes problemas e grandes êxitos",
                 "voce_se_deu_bem": [
-                    "fez um contato poderoso no Departamento de Polícia.",
-                    "fez um contato poderoso na Promotoria.",
-                    "fez um contato poderoso no Gabinete do Prefeito.",
-                    "sorte nas finanças. Você ganhou ${1D10x100} créditos.",
-                    "êxito no trabalho ou nos negócios. Você recebeu ${1D10x100} créditos como resultado do seu esforço.",
-                    "encontrou um mestre/sensei que lhe ensinou uma nova arte marcial ou aperfeiçoou uma já conhecida.",
-                    "encontrou um professor que lhe ajudou a aperfeiçoar um conhecimento/perícia baseada em inteligência ou lhe ensinou uma perícia nova",
-                    "um poderoso executivo de Corporação lhe deve um favor.",
-                    "um grupo de Nômades local considera você um amigo. Eles ficarão felizes em ajuda-lo de vez em quando (máximo de uma vez ao mês).",
-                    "fez um amigo na força policial. Ele pode te ajudar a obter informações em qualquer situação relacionada a polícia",
-                    "uma das gangues locais gosta de vôce. Eles podem ajuda-lo uma de vez em quando mas melhor não exagerar (máximo de uma vez ao mês)",
-                    "encontrou um instrutor de combate. Ele lhe ensinou combate com armado (mas não combate desarmado) com um tipo de arma a escolha do jogador."
+                    "Você fez um contato poderoso no Departamento de Polícia.",
+                    "Você fez um contato poderoso na Promotoria.",
+                    "Você fez um contato poderoso no Gabinete do Prefeito.",
+                    "Você teve sorte nas finanças. Você ganhou ${1D10x100} créditos.",
+                    "Você teve êxito no trabalho ou nos negócios. Você recebeu ${1D10x100} créditos como resultado do seu esforço.",
+                    "Você encontrou um mestre/sensei que lhe ensinou uma nova arte marcial ou aperfeiçoou uma já conhecida.",
+                    "Você encontrou um professor que lhe ajudou a aperfeiçoar um conhecimento/perícia baseada em inteligência ou lhe ensinou uma perícia nova",
+                    "Um poderoso executivo de Corporação lhe deve um favor.",
+                    "Um grupo de Nômades local considera você um amigo. Eles ficarão felizes em ajuda-lo de vez em quando (máximo de uma vez ao mês).",
+                    "Você fez um amigo na força policial. Ele pode te ajudar a obter informações em qualquer situação relacionada a polícia",
+                    "Uma das gangues locais gosta de vôce. Eles podem ajuda-lo uma de vez em quando mas melhor não exagerar (máximo de uma vez ao mês)",
+                    "Você encontrou um instrutor de combate. Ele lhe ensinou combate com armado (mas não combate desarmado) com um tipo de arma a escolha do jogador."
                 ],
                 "aconteceu_um_desastre": [
                     "Você deve ${1D10x100} em créditos para alguém perigoso. Se você não puder paga-los agora, você tem uma dívida a ser paga, em dinheiro... ou sangue",
@@ -386,11 +387,11 @@
                     "Você foi mantido como refém por {1D10} meses.",
                     "Você contraiu uma doença nessa época. Isso afetou negativamente sua destreza permanentemente.",
                     "Você adquiriu um vício nessa época. Isso afetou negativamente sua agilidade permanentemente.",
-                    "Você foi traído e agora esta sendo chantageado",
-                    "Você foi traído e um segredo seu foi revelado",
-                    "Você foi traído por um amigo muito próximo",
-                    "Você foi traído em um romance",
-                    "Você foi traído no seu trabalho",
+                    "Você foi traído e agora esta sendo chantageado.",
+                    "Você foi traído e um segredo seu foi revelado.",
+                    "Você foi traído por um amigo muito próximo.",
+                    "Você foi traído em um romance.",
+                    "Você foi traído no seu trabalho.",
                     "Você sofreu um grave acidente e ficou terrivelmente desfigurado, o que influencia negativamente em relações sociais.",
                     "Você sofreu um grave acidente e ficou hospitalizado por {1D10} meses.",
                     "Você sofreu um grave acidente e não lembra do que aconteceu em um período de {1D10} meses daquele ano.",
@@ -417,11 +418,11 @@
                     "Você ouve vozes, é violento, psicótico e depressivo. Isso interfere negativamente em seus reflexo e auto-controle."
                 ],
                 "o_que_vai_fazer_a_respeito": [
-                    "limpar seu nome.",
-                    "deixar pra lá e tentar esquecer.",
-                    "caçar os responsáveis e fazer com que paguem!",
-                    "tomar o que é seu por direito.",
-                    "salvar, se possivel, qualquer envolvido nessa situação."
+                    "Agora você pretende limpar seu nome.",
+                    "Nesse momento você acha melhor deixar pra lá e tentar esquecer.",
+                    "Tudo que você quer agora é caçar os responsáveis por isso e fazer com que paguem!",
+                    "O que você vai fazer é tomar o que lhe tiraram ou compensar sua perda... de qualquer forma.",
+                    "Agora você pretende salvar, se possivel, qualquer envolvido nessa situação."
                 ]
             },
             "amigos_e_inimigos": {
@@ -431,48 +432,50 @@
                     "Mulher"
                 ],
                 "fez_um_inimigo": [
-                    "um ex-amigo",
-                    "um(a) ex-amante",
-                    "um parente",
-                    "um inimigo de infância",
-                    "alguém que trabalha para você",
-                    "alguém para quem você trabalha",
-                    "um sócio ou um companheiro de trabalho",
-                    "um membro de uma gangue",
-                    "um executivo de uma Corporação",
-                    "um funcionário do governo"
+                    "ex-amig{x}",
+                    "ex-amante",
+                    "parente",
+                    "inimig{x} de infância",
+                    "pessoa que trabalha para você",
+                    "pessoa para quem você trabalha",
+                    "sóci{x} ou companheir{x} de trabalho",
+                    "integrante de uma gangue",
+                    "executiv{x} de uma Corporação",
+                    "funcionári{x} do governo"
                 ],
                 "a_causa": [
-                    "Fez com que o outro perdesse seu prestigio ou status.",
-                    "Causou a perda de um amante, amigo ou parente.",
-                    "Causou uma grande humilhação.",
-                    "Acusou o outro de covardia ou de algum outro defeito pessoal.",
-                    "Causou terríveis marcas físicas: [a perda de um olho, a perda de um braço, deixou terríveis cicatrizes].",
-                    "Abandonou ou traíu o outro.",
-                    "Rejeitou um emprego ou envolvimento amoroso com o outro.",
-                    "Vocês simplesmente não gostam um do outro.",
-                    "Foi um rival amoroso.",
-                    "acabou com um plano do outro."
+                    "fez com que perdesse seu prestigio ou status",
+                    "lhe causou a perda de um amante, amigo ou parente",
+                    "lhe causou uma grande humilhação",
+                    "lhe fez uma acusação de covardia ou de algum outro defeito pessoal",
+                    "lhe causou a perda de um olho",
+                    "lhe causou a perda de um braço",
+                    "lhe deixou com terriveis cicatrizes",
+                    "{x} abandonou ou traíu",
+                    "rejeitou um emprego ou envolvimento amoroso",
+                    "e essa pessoa simplesmente não se bicam",
+                    "foi um rival amoroso",
+                    "acabou com um plano seus planos"
                 ],
                 "quem_se_deu_mal": [
-                    "Ele o odeiam.",
-                    "Você os odeia.",
-                    "O sentimento é mútuo."
+                    "{y} te odeia",
+                    "você {x} odeia",
+                    "vocês se odeiam"
                 ],
                 "o_que_vai_fazer_a_respeito": [
-                    "ser possuído por uma cólera assassina e arrancar a cabeça do outro",
-                    "Evitar a ralé.",
-                    "Apunhala-lo pelas costas.",
-                    "Ignorar a ralé.",
-                    "Atacá-lo verbalmente."
+                    "ser possuído por uma cólera assassina e arrancar a cabeça del{x}",
+                    "evitar a ralé",
+                    "epunhala-l{x} pelas costas",
+                    "ignorar a ralé",
+                    "atacá-l{x} verbalmente"
                 ],
                 "o_que_ele_pode_fazer_contra_voce": [
-                    "Contar consigo mesmo.",
-                    "Contar consigo mesmo e alguns amigos.",
-                    "Contar com uma gangue completa.",
-                    "Usar a influência de uma pequena corporação.",
-                    "Usar a influência de uma grande corporação.",
-                    "Usar o poder de uma agência do governo."
+                    "pode contar consigo mesmo",
+                    "pode contar consigo mesmo e alguns amigos",
+                    "pode contar com uma gangue completa",
+                    "pode usar a influência de uma pequena corporação",
+                    "pode usar a influência de uma grande corporação",
+                    "pode usar o poder de uma agência do governo"
                 ],
                 "fazendo_um_amigo": [
                     "como um irmão/irmã mais velho para você",
@@ -490,10 +493,10 @@
             "vida_amorosa": {
                 "nome": "Vida amorosa",
                 "como_foi": [
-                    "um caso amoroso feliz.",
-                    "Um caso trágico.",
-                    "um caso amoroso problemático.",
-                    "casos rápidos e encontros quentes."
+                    "um caso amoroso feliz",
+                    "um caso trágico",
+                    "um caso amoroso problemático",
+                    "casos rápidos e encontros quentes"
                 ],
                 "caso_amoroso_tragico": [
                     "Seu amor morreu em um acidente.",
@@ -508,7 +511,7 @@
                     "Seu/sua amante foi aprisionado(a) ou exilado(a)."
                 ],
                 "caso_amoroso_problematico": [
-                    "Familia/amigos de seu/sua amante o odeiam",
+                    "Os familiares/amigos de seu/sua amante te odeiam.",
                     "Familia/amigos de seu/sua amante se utilizarão de todos os meios para se livrar de você.",
                     "Sua familia/amigos odeiam seu/sua amante.",
                     "Um de vocês tem um rival amoroso.",
@@ -520,16 +523,16 @@
                     "Vocês tem família/histórico conflitantes."
                 ],
                 "sentimentos_mutuos": [
-                    "Ele/ela ainda o ama.",
-                    "Você ainda o/a ama.",
-                    "Vocês ainda se amam.",
-                    "Você o odeial.",
-                    "Ele/ela o odeia.",
-                    "Vocês se odeiam.",
-                    "Vocês são amigos.",
-                    "Nenhum sentimento de nenhum dos lados acabou.",
-                    "Você gosta dele/dela mas ele/ela o odeia.",
-                    "Ele/ela gosta de você mas você o/a odeia."
+                    "ele/ela ainda o ama.",
+                    "você ainda o/a ama.",
+                    "vocês ainda se amam.",
+                    "você o/a odeia.",
+                    "ele/ela o odeia.",
+                    "vocês se odeiam.",
+                    "vocês são amigos.",
+                    "nenhum sentimento de nenhum dos lados acabou.",
+                    "você gosta dele/dela mas ele/ela o odeia.",
+                    "ele/ela gosta de você mas você o/a odeia."
                 ]
             },
             "nada":{

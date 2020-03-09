@@ -1,14 +1,17 @@
 import React from 'react';
 
 export default (props) => {
+    const {
+        nome,
+        aconteceu_um_desastre,
+        o_que_vai_fazer_a_respeito,
+        voce_se_deu_bem
+    } = props.content;
+
     return (
-        <div className="flux_inner_cont flux_inner_cont--1">
-            <h2>Grandes problemas, grandes êxitos</h2>
-            <ul>
-                <li>Aconteceu um desastre!</li>
-                <li>O que você vai fazer a respeito?</li>
-                <li>Você se deu bem.</li>
-            </ul>
-        </div>
+        <>
+        <h4>{nome}</h4>
+        <p>{!!voce_se_deu_bem ? voce_se_deu_bem : `${aconteceu_um_desastre} ${o_que_vai_fazer_a_respeito}`}</p>
+        </>
     )
 }

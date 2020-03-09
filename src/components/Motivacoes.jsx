@@ -1,29 +1,20 @@
 import React from 'react';
-import MySelect from './mySelect';
-export default (props) => {
 
-    console.log(props.item);
+export default (props) => {
     const {
+        nome,
         caracteristicas_de_sua_personalidade,
         pessoa_que_mais_valoriza,
         o_que_mais_valoriza,
         qual_a_sua_opiniao_em_relacao_as_pessoas,
         seu_objeto_mais_estimado
-    } = props.item;
-    
-    const $type = 'motivacoes'
-
+    } = props.content;
     return (
-        <section className="flux_cont flux_cont--3">
-            <h1>Motivações:</h1>
-            <ul>
-                <li>Personalidade: <MySelect arr={caracteristicas_de_sua_personalidade} type={$type} name='caracteristicas_de_sua_personalidade' /></li>
-                <li>A pessoa que mais valoriza: <MySelect arr={pessoa_que_mais_valoriza} type={$type} name='pessoa_que_mais_valoriza' /></li>
-                <li>O que mais valoriza: <MySelect arr={o_que_mais_valoriza} type={$type} name='o_que_mais_valoriza' /></li>
-                <li>Opinião sobre a maioria das pessoas: <MySelect arr={qual_a_sua_opiniao_em_relacao_as_pessoas} type={$type} name='qual_a_sua_opiniao_em_relacao_as_pessoas' /></li>
-                <li>Objeto mais estimado: <MySelect arr={seu_objeto_mais_estimado} type={$type} name='seu_objeto_mais_estimado' /></li>
-            </ul>
-        </section>
+        <section>
+        <h2>{nome}</h2>
+        <p>Você é uma pessoa {caracteristicas_de_sua_personalidade}.</p>
+        <p>A pessoa que você mais valoriza é {pessoa_que_mais_valoriza}. Você valoriza {o_que_mais_valoriza} acima de tudo e sua opinião em relação às outras pessoas é {qual_a_sua_opiniao_em_relacao_as_pessoas}.</p>
+        <p>O objeto que você mais gosta é {seu_objeto_mais_estimado}.</p>
+      </section>
     )
 }
-

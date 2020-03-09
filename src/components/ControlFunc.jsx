@@ -69,13 +69,17 @@ func.defineEvento = eventos => {
     return roll < 4 ? 0 : roll < 7 ? 1 : roll < 9 ? 2 : 3
 }
 
-func.filtraResp = string => {
+func.filtraResp = (string,artigo = 0) => {
     
     let st = string;
 
-    if (string.indexOf('{1D10x100}') !== -1) st = string.replace('{1D10x100}', func.dado(10) * 1000)
+    if (string.indexOf('{1D10x100}') !== -1) st = string.replace(/{1D10x100}/g, func.dado(10) * 1000)
 
-    if (string.indexOf('{1D10}') !== -1) st = string.replace('{1D10}', func.dado(10))
+    if (string.indexOf('{1D10}') !== -1) st = string.replace(/{1D10}/g, func.dado(10))
+
+    if (string.indexOf('{x}') !== -1) st = string.replace(/{x}/g, artigo[0] === 'o' ? 'o' : 'a')
+    
+    if (string.indexOf('{y}') !== -1) st = string.replace(/{y}/g, artigo[0] === 'o' ? 'ele' : 'ela')
     
     return st
 
@@ -95,13 +99,14 @@ func.gep = ev => {
 }
 
 func.origens_e_motivacoes_char = _ => {
-    const $oe = Fluxo.origens_e_estilo
-    const origemRoll = func.dado($oe.origem_etnica.length) - 1
-    const gen = func.dado(2) - 1 ? 'homem' : 'mulher'
+    const $oe = Fluxo.origens_e_estilo;
+    const origemRoll = func.dado($oe.origem_etnica.length) - 1;
+    const gen = func.dado(2) - 1 ? 'homem' : 'mulher';
 
     return {
         origens_estilo: {
-            nome_char: gen === 'homem' ? 'Cara Genérico' : 'Garota Genérica',
+            genero: gen,
+            artigo: gen === 'homem' ? ['o', 'um', 'ele'] : ['a', 'uma', 'ela'],
             roupas: func.rollArr($oe.roupas),
             cabelos: func.rollArr($oe.cabelos),
             detalhes: func.rollArr($oe.detalhes),
@@ -113,12 +118,17 @@ func.origens_e_motivacoes_char = _ => {
 
 func.aei = ev => {
     const bol = func.dado(2) - 1;    
+    const gen = func.dado(2) - 1 ? 'homem' : 'mulher';
+    const {roupas, cabelos, detalhes} = Fluxo.origens_e_estilo;
+    const artigo = gen === 'homem' ? ['o', 'um', 'ele'] : ['a', 'uma', 'ela'];
 
     return {
         nome: ev.nome,
+        artigo: artigo,
         origens_e_motivacoes: func.origens_e_motivacoes_char(),
         info_amigo: !bol && func.$amigos(ev),
-        info_inimigo: !!bol && func.$inimigos(ev)
+        info_inimigo: !!bol && func.$inimigos(ev),
+        estilo: `${artigo[2]} veste ${func.rollArr(roupas)}, seu cabelo é ${func.rollArr(cabelos)} e ${artigo[2]} ${func.rollArr(detalhes)}.`
     }
     
 }
@@ -184,7 +194,7 @@ func.section3 = _ => {
 } 
 
 func.section4 = $idade => {
-    const anos = $idade - 16;
+    const anos = 3//$idade - 16;
     const $ev = Fluxo.eventos_da_vida;
 
     const eventos_da_vida = []
@@ -192,6 +202,9 @@ func.section4 = $idade => {
     const evento_deste_ano = _ => {
         const roll = func.dado(10)
         return roll < 4 ? func.gep($ev.eventos.grandes_problemas_exitos) : roll < 7 ? func.aei($ev.eventos.amigos_e_inimigos) : roll < 9 ? func.va($ev.eventos.vida_amorosa) : 'Nada aconteceu este ano.'
+        // return func.gep($ev.eventos.grandes_problemas_exitos) //teste
+        // return func.aei($ev.eventos.amigos_e_inimigos) //teste
+        // return func.va($ev.eventos.vida_amorosa); //teste
     }
 
     for (let i = 0; i < anos; i++) eventos_da_vida.push(evento_deste_ano())
@@ -199,9 +212,7 @@ func.section4 = $idade => {
     return {
         nome: $ev.nome,
         eventos_da_vida: eventos_da_vida
-    }
-
-    
+    }    
 } 
 
 func.init = idade => {
@@ -213,8 +224,6 @@ func.init = idade => {
     }
     
     return JSON.stringify(obj)
-    
-    // return obj
 }
 
 export default func

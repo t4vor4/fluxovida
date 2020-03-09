@@ -1,14 +1,3 @@
-.btn_like {
-  cursor: pointer;
-  border-bottom: 1px solid #ccc;
-}
-
-ul.irmao {
-  border: 1px solid #ccc;
-  padding: 5px;
-}
-
-[addbro="7"],
-[removebro="0"] {
-  display: none;
+.content_page {
+  padding: 0 10px;
 }

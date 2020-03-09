@@ -4,42 +4,41 @@ import AmigosInimigos from './AmigosInimigos';
 import VidaAmorosa from './VidaAmorosa';
 
 export default (props) => {
+    // console.log(props.content)
+
+    const { nome, eventos_da_vida } = props.content;
+
+    const listaEventos = []
+
+    for (let i = 0; i < eventos_da_vida.length; i++) {
+        const evento = eventos_da_vida[i];
+
+        switch (evento.nome) {
+            case "Grandes problemas e grandes êxitos":
+                listaEventos.push(<li key={i}><ProblemasExitos content={evento} /></li>)
+                break;
+
+            case "Amigos e inimigos":
+                listaEventos.push(<li key={i}><AmigosInimigos content={evento} /></li>)
+                break;
+
+            case "Vida amorosa":
+                listaEventos.push(<li key={i}><VidaAmorosa content={evento} /></li>)
+                break;
+
+            //     // case "Grandes problemas e grandes êxitos":
+            //     //     <ProblemasExitos content={evento} />
+            //     //     break;
+
+
+        }
+
+    }
+
     return (
-        <section className="flux_cont flux_cont--4">
-            <h1>Eventos da vida</h1>
-            {/* <div className="flux_inner_cont flux_inner_cont--1">
-                <h2>Grandes problemas, grandes êxitos</h2>
-                <ul>
-                    <li>Aconteceu um desastre!</li>
-                    <li>O que você vai fazer a respeito?</li>
-                    <li>Você se deu bem.</li>
-                </ul>
-            </div>
-            <div className="flux_inner_cont flux_inner_cont--2">
-                <h2>Amigos e inimigos</h2>
-                <ul>
-                    <li>Fez uma inimizade com: </li>
-                    <li>A causa: </li>
-                    <li>Quem se deu mal?</li>
-                    <li>O que vai fazer a respeito?</li>
-                    <li>O que ele pode fazer contra você?</li>
-                    <li>Você fez uma amizade com:</li>
-                </ul>
-            </div> 
-            <div className="flux_inner_cont flux_inner_cont--3">
-                <h2>Vida amorosa</h2>
-                <ul>
-                    <li>Como foi?</li>
-                    <li>Caso amoroso trágico.</li>
-                    <li>Caso amoroso problemático.</li>
-                    <li>Sentimentos mútuos:</li>
-                </ul>
-            </div>
-            */}
-            <ProblemasExitos />
-            <AmigosInimigos />
-            <VidaAmorosa />
+        <section>
+            <h2>{nome}</h2>
+            <ul>{listaEventos}</ul>
         </section>
     )
 }
-
