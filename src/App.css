@@ -1,3 +1,108 @@
+:root {
+  /* --main-bg-color: #01012b; */
+  --main-bg-color: #e2f3e4;
+  --light-color: #332c50;
+  --main-color: #332c50;
+  --color-display: #332c50;
+  --destaque: #94e344;
+  --p-color: #332c50;
+  --shadow: #1900ff;
+  --font-display: 'Bungee', cursive;
+  --font-title: 'Racing Sans One', cursive;
+  --font-text: 'Electrolize', sans-serif;
+  --aside-h: 30px;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+  font-size: 16px;
+  font-family: var(--font-text);
+}
+
+footer {
+  display: block;
+  padding-bottom: var(--aside-h)+2 ;
+}
+
+h1 {
+  font-family: var(--font-display);
+  color: var(--color-display);
+  font-size: 5rem;
+  line-height: 1.5em;
+  margin: 0 auto;
+  width: 355px;
+  text-align: center;
+  position: relative;
+}
+
+h1::before,
+h2::before {
+  content: "";
+  width: 90%;
+  height: 50%;
+  background-color: var(--destaque);
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  z-index: -1;
+  transform: skewX(-10deg);
+}
+
+h1 small {
+  color: var(--light-color);
+  font-family: var(--font-text);
+  text-transform: uppercase;
+  font-size: 1.0rem;
+  font-weight: 700;
+  left: 0;
+  line-height: 1.4em;
+  margin-top: -1.3rem;
+  position: absolute;
+  
+}
+
+h2 {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.0em;
+  padding: 0 0 0 2%;
+  position: relative;
+}
+
+h2::before {
+  left: 0;
+  top: 10%;
+  height: 110%;
+  transform: skewX(-15deg);
+  width: 100%;
+}
+
 .content_page {
   padding: 0 10px;
 }
+
+p {
+  padding: 0 10px;
+  font-size: 1.3rem;
+  color: var(--p-color);
+  font-weight: 600;
+}
+
+aside {
+  float: left;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--destaque);
+  padding: 10px;
+}
+
+aside button {
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+}
+
