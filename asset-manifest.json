@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/fluxovida/static/css/main.28b9554a.chunk.css",
+    "main.js": "/fluxovida/static/js/main.651c4dd3.chunk.js",
+    "main.js.map": "/fluxovida/static/js/main.651c4dd3.chunk.js.map",
+    "runtime-main.js": "/fluxovida/static/js/runtime-main.5e6ac8f1.js",
+    "runtime-main.js.map": "/fluxovida/static/js/runtime-main.5e6ac8f1.js.map",
+    "static/js/2.2d394fd8.chunk.js": "/fluxovida/static/js/2.2d394fd8.chunk.js",
+    "static/js/2.2d394fd8.chunk.js.map": "/fluxovida/static/js/2.2d394fd8.chunk.js.map",
+    "index.html": "/fluxovida/index.html",
+    "precache-manifest.16197ecce6825d6d8805d9ba966c3cbd.js": "/fluxovida/precache-manifest.16197ecce6825d6d8805d9ba966c3cbd.js",
+    "service-worker.js": "/fluxovida/service-worker.js",
+    "static/css/main.28b9554a.chunk.css.map": "/fluxovida/static/css/main.28b9554a.chunk.css.map",
+    "static/js/2.2d394fd8.chunk.js.LICENSE": "/fluxovida/static/js/2.2d394fd8.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5e6ac8f1.js",
+    "static/js/2.2d394fd8.chunk.js",
+    "static/css/main.28b9554a.chunk.css",
+    "static/js/main.651c4dd3.chunk.js"
+  ]
+}
