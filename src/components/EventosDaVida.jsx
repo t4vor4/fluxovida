@@ -15,15 +15,15 @@ export default (props) => {
 
         switch (evento.nome) {
             case "Grandes problemas e grandes êxitos":
-                listaEventos.push(<li key={i}><ProblemasExitos content={evento} /></li>)
+                listaEventos.push(<li key={i} className="eventos_da_vida__li"><ProblemasExitos content={evento} /></li>)
                 break;
 
             case "Amigos e inimigos":
-                listaEventos.push(<li key={i}><AmigosInimigos content={evento} /></li>)
+                listaEventos.push(<li key={i} className="eventos_da_vida__li"><AmigosInimigos content={evento} /></li>)
                 break;
 
             case "Vida amorosa":
-                listaEventos.push(<li key={i}><VidaAmorosa content={evento} /></li>)
+                listaEventos.push(<li key={i} className="eventos_da_vida__li"><VidaAmorosa content={evento} /></li>)
                 break;
 
             //     // case "Grandes problemas e grandes êxitos":
@@ -36,9 +36,9 @@ export default (props) => {
     }
 
     return (
-        <section>
+        <section className="eventos_da_vida">
             <h2>{nome}</h2>
-            <ul>{listaEventos}</ul>
+            <ul className="eventos_da_vida__ul">{listaEventos}</ul>
         </section>
     )
 }

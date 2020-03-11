@@ -20,11 +20,13 @@ export default (props) => {
         <section>
             <h2>{nome}</h2>
             <p>O nível de sua familia é o de {nivel_familiar}. {pais} {!!algo_aconteceu_a_seus_pais && algo_aconteceu_a_seus_pais}.</p>
-            <p>{status_familiar} {!!tragedia_familiar && tragedia_familiar}.</p>
+            <p>{status_familiar}{!!tragedia_familiar && tragedia_familiar}.</p>
             <p>{o_ambiente_de_sua_infancia}</p>
 
-            <h3>Irmãos</h3>
-            {<Compirmaos irmaos={irmaos} />}
+            <article>
+                <h3>Irmãos</h3>
+                {<Compirmaos irmaos={irmaos} />}
+            </article>
         </section>
     )
 

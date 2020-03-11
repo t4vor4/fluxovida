@@ -17,10 +17,10 @@ export default (props) => {
             b.list.push(tags)
         }
 
-        b.final = <div>
+        b.final = <>
             <p>Você tem {b.bro.length} irmão{b.bro.length > 1 && 's'}</p>
             <ul>{b.list}</ul>
-        </div>
+        </>
     }
     else {
         b.final = <div>

@@ -29,7 +29,7 @@ function App() {
     <div className="content_page">
 
       <header>
-        <h1>Fluxo<br/>vida <small>um gerador de background para personagens cyberpunks</small></h1>
+        <h1><span className="h1_fluxo">Fluxo</span><span className="h1_vida">vida</span><small>um gerador de background para personagens cyberpunks</small></h1>
       </header>
       
       <Origem content={initial.section1}/>
